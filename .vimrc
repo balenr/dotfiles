@@ -7,6 +7,7 @@ call vundle#begin()
 
 " vundle packages
 Bundle 'xoria256.vim'
+Plugin 'sudar/vim-arduino-syntax'
 
 call vundle#end()
 
