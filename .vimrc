@@ -12,8 +12,9 @@ Plugin 'sudar/vim-arduino-syntax'
 call vundle#end()
 
 " vim options
-filetype plugin indent on
 syntax on
+filetype plugin indent on
+set autoindent
 colorscheme xoria256
 "set background=dark
 set expandtab
@@ -24,9 +25,9 @@ set number
 "set wrap
 "set backspace=0
 set t_Co=256
-"set colorcolumn=+1
-"set textwidth=80
 set hlsearch
+set ruler
+set laststatus=2
 
 " disable arrow keys to force using hjkl
 "noremap <Up> <Nop>
@@ -36,3 +37,6 @@ set hlsearch
 
 " abbreviations
 abbr Q q
+
+set backupdir=~/.vimbackup
+set directory=/var/tmp,/tmp
