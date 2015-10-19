@@ -5,6 +5,9 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
 " vundle packages
 Bundle 'xoria256.vim'
 Plugin 'sudar/vim-arduino-syntax'
