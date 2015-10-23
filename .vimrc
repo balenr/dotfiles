@@ -9,8 +9,15 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " vundle packages
+
+" color theme
 Bundle 'xoria256.vim'
+
+" arduino syntax
 Plugin 'sudar/vim-arduino-syntax'
+
+" vim status line
+Plugin 'bling/vim-airline'
 
 call vundle#end()
 
@@ -29,7 +36,7 @@ set number
 "set backspace=0
 set t_Co=256
 set hlsearch
-set ruler
+"set ruler
 set laststatus=2
 
 " disable arrow keys to force using hjkl
