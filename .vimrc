@@ -12,6 +12,7 @@ Plugin 'VundleVim/Vundle.vim'
 
 " color theme
 Bundle 'xoria256.vim'
+Bundle 'tomasr/molokai'
 
 " arduino syntax
 Plugin 'sudar/vim-arduino-syntax'
@@ -26,6 +27,7 @@ syntax on
 filetype plugin indent on
 set autoindent
 colorscheme xoria256
+"colorscheme molokai
 "set background=dark
 set expandtab
 set tabstop=2
@@ -50,3 +52,6 @@ abbr Q q
 
 set backupdir=~/.vimbackup
 set directory=/var/tmp,/tmp
+
+" Powerline fonts
+let g:airline_powerline_fonts = 1
