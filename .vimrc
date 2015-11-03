@@ -9,18 +9,10 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " vundle packages
-
-" color theme
 Plugin 'xoria256.vim'
 Plugin 'tomasr/molokai'
-
-" arduino syntax
 Plugin 'sudar/vim-arduino-syntax'
-
-" vim status line
 Plugin 'bling/vim-airline'
-
-" other plugins
 Plugin 'ctrlp.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/nerdtree'
@@ -31,19 +23,16 @@ call vundle#end()
 syntax on
 filetype plugin indent on
 set autoindent
-colorscheme xoria256
-" colorscheme molokai
+color xoria256
+" color molokai
 " set background=dark
 set expandtab
 set tabstop=2
 set shiftwidth=2
 set showtabline=2
 set number
-" set wrap
-" set backspace=0
 set t_Co=256
 set hlsearch
-" set ruler
 set laststatus=2
 
 " disable arrow keys to force using hjkl
@@ -58,5 +47,6 @@ abbr Q q
 set backupdir=~/.vimbackup
 set directory=/var/tmp,/tmp
 
-" Powerline fonts
+" Airline configuration
 let g:airline_powerline_fonts = 1
+let g:airline_theme = "dark"
