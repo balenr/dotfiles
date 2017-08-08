@@ -20,6 +20,7 @@ Plugin 'scrooloose/nerdtree'
 "Plugin 'edkolev/tmuxline.vim'
 "Plugin 'edkolev/promptline.vim'
 Plugin 'digitaltoad/vim-jade'
+Plugin 'PProvost/vim-ps1'
 
 call vundle#end()
 
