@@ -7,20 +7,13 @@ Plugin 'VundleVim/Vundle.vim'
 
 " vundle packages
 Plugin 'xoria256.vim'
-"Plugin 'sickill/vim-monokai'
-"Plugin 'sudar/vim-arduino-syntax'
-"Plugin 'vim-airline/vim-airline'
-"Plugin 'vim-airline/vim-airline-themes'
 Plugin 'powerline/powerline', {'rtp':'powerline/bindings/vim/'}
 Plugin 'ctrlp.vim'
 Plugin 'tpope/vim-fugitive'
-"Plugin 'tpope/vim-surround'
-"Plugin 'tpope/vim-repeat'
 Plugin 'scrooloose/nerdtree'
-"Plugin 'edkolev/tmuxline.vim'
-"Plugin 'edkolev/promptline.vim'
-Plugin 'digitaltoad/vim-jade'
 Plugin 'PProvost/vim-ps1'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-repeat'
 
 call vundle#end()
 
@@ -28,10 +21,8 @@ call vundle#end()
 syntax on
 filetype plugin indent on
 set autoindent
-colorscheme xoria256
-"colorscheme smyck
-"colorscheme monokai
-"set background=dark
+"colorscheme xoria256
+colorscheme smyck
 set expandtab
 set tabstop=2
 set softtabstop=2
@@ -79,11 +70,13 @@ nnoremap <C-H> <C-W><C-H>
 " NERDTreeToggle thru Ctrl-n
 "map <C-n> :NERDTreeToggle<CR>
 
+" Enable folding
+set foldmethod=indent
+set foldlevel=99
+
+" Enable folding with spacebar
+nnoremap <space> za
+
 " abbreviations
 abbr Q q
-
-" Airline configuration
-"let g:airline_powerline_fonts = 1
-"let g:airline#extensions#whitespace#enabled = 0
-"let g:airline_theme = "dark"
-
+abbr Wq wq
