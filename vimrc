@@ -21,8 +21,15 @@ call vundle#end()
 syntax on
 filetype plugin indent on
 set autoindent
-"colorscheme xoria256
-colorscheme smyck
+
+" Set vim colorscheme based on iTerm profile
+let iterm_profile = $ITERM_PROFILE
+if iterm_profile == "macOS Smyck"
+  colorscheme smyck
+else
+  colorscheme xoria256
+endif
+
 set expandtab
 set tabstop=2
 set softtabstop=2
