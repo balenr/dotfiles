@@ -1,3 +1,6 @@
+set nocompatible
+filetype off
+
 " init vundle
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -14,6 +17,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'PProvost/vim-ps1'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
+Plugin 'chr4/nginx.vim'
 
 call vundle#end()
 
@@ -27,7 +31,7 @@ let iterm_profile = $ITERM_PROFILE
 if iterm_profile == "macOS Smyck"
   colorscheme smyck
 else
-  colorscheme xoria256
+  colorscheme phosphor
 endif
 
 set expandtab
@@ -42,6 +46,9 @@ set laststatus=2
 set splitbelow
 set splitright
 set noshowmode
+
+"set cursorline
+highlight CursorLine cterm=NONE ctermbg=darkblue ctermfg=white guibg=darkblue ctermfg=white
 
 " Environment (GUI)
 if has('gui_running')
@@ -69,13 +76,13 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
 " disable arrow keys to force using hjkl
-"noremap <Up> <Nop>
-"noremap <Down> <Nop>
-"noremap <Left> <Nop>
-"noremap <Right> <Nop>
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>
 
 " NERDTreeToggle thru Ctrl-n
-"map <C-n> :NERDTreeToggle<CR>
+map <C-n> :NERDTreeToggle<CR>
 
 " Enable folding
 set foldmethod=indent
