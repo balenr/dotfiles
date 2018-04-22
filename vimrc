@@ -10,7 +10,9 @@ Plugin 'VundleVim/Vundle.vim'
 
 " vundle packages
 Plugin 'xoria256.vim'
-Plugin 'powerline/powerline', {'rtp':'powerline/bindings/vim/'}
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'edkolev/tmuxline.vim'
 Plugin 'ctrlp.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/nerdtree'
@@ -26,11 +28,18 @@ syntax on
 filetype plugin indent on
 set autoindent
 
+" color settings
+set t_Co=256
+colorscheme smyck
+
 " Set vim colorscheme based on iTerm profile
 let iterm_profile = $ITERM_PROFILE
 if iterm_profile == "macOS Smyck"
   colorscheme smyck
+elseif iterm_profile == "Solarized Dark"
+  colorscheme solarized
 else
+  "colorscheme xoria256
   colorscheme phosphor
 endif
 
@@ -38,9 +47,8 @@ set expandtab
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
-set showtabline=2
+set showtabline=1
 set number
-set t_Co=256
 set hlsearch
 set laststatus=2
 set splitbelow
@@ -76,10 +84,10 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
 " disable arrow keys to force using hjkl
-noremap <Up> <Nop>
-noremap <Down> <Nop>
-noremap <Left> <Nop>
-noremap <Right> <Nop>
+"noremap <Up> <Nop>
+"noremap <Down> <Nop>
+"noremap <Left> <Nop>
+"noremap <Right> <Nop>
 
 " NERDTreeToggle thru Ctrl-n
 map <C-n> :NERDTreeToggle<CR>
@@ -94,3 +102,10 @@ nnoremap <space> za
 " abbreviations
 abbr Q q
 abbr Wq wq
+
+" vim-airline configuration
+let g:airline_powerline_fonts = 1
+if iterm_profile == "Solarized Dark"
+  let g:airline_theme = "solarized"
+  let g:airline_solarized_bg = "dark"
+endif
