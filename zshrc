@@ -12,7 +12,6 @@ ZSH_THEME="rvanbalen"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  git
   themes
   virtualenv
 )
@@ -26,3 +25,5 @@ export LANG=en_US.UTF-8
 
 # Aliases
 alias cls="clear"
+alias zshrc="vim ~/.zshrc"
+alias vimrc="vim ~/.vimrc"

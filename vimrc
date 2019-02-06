@@ -20,6 +20,8 @@ Plugin 'PProvost/vim-ps1'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
 Plugin 'chr4/nginx.vim'
+"Plugin 'JamshedVesuna/vim-markdown-preview'
+Plugin 'iamcco/markdown-preview.vim'
 
 call vundle#end()
 
@@ -39,8 +41,8 @@ if iterm_profile == "macOS Smyck"
 elseif iterm_profile == "Solarized Dark"
   colorscheme solarized
 else
-  "colorscheme xoria256
-  colorscheme phosphor
+  colorscheme xoria256
+  "colorscheme phosphor
 endif
 
 set expandtab
