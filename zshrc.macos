@@ -74,7 +74,7 @@ POWERLEVEL9K_SHOW_CHANGESET='true'
 POWERLEVEL9K_STATUS_VERBOSE=true
 
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon battery context dir vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status ip custom_wifi_signal ram load virtualenv)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status ip custom_wifi_signal virtualenv)
 
 # Uncomment the following line to change how often to auto-update (in days).
 export UPDATE_ZSH_DAYS=14
@@ -89,7 +89,7 @@ export UPDATE_ZSH_DAYS=14
 # ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-#COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -109,13 +109,12 @@ export UPDATE_ZSH_DAYS=14
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+  extract
+  nmap
   colorize
   colored-man-pages
-  zsh-autosuggestions
   zsh-syntax-highlighting
-  sudo
-  python
-  virtualenv
+  zsh-autosuggestions
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -126,6 +125,8 @@ source $ZSH/oh-my-zsh.sh
 export LANG=en_US.UTF-8
 
 # Aliases
+alias zshconfig='vim ~/.zshrc'
+alias reloadzsh='source ~/.zshrc'
 alias cls='clear'
 alias down='cd ~/Downloads'
 alias lc='colorls'
@@ -136,3 +137,5 @@ export PATH="/usr/local/opt/ruby/bin:$PATH"
 export LDFLAGS="-L/usr/local/opt/ruby/lib"
 export CPPFLAGS="-I/usr/local/opt/ruby/include"
 export PKG_CONFIG_PATH="/usr/local/opt/ruby/lib/pkgconfig"
+
+# test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"

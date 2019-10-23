@@ -1,6 +1,8 @@
 # Path to your oh-my-zsh
 export ZSH=$HOME/.oh-my-zsh
 
+export DEFAULT_USER="$USER"
+
 TERM=xterm-256color
 
 # Set name of the theme to load. Optionally, if you set this to "random"
@@ -46,8 +48,6 @@ POWERLEVEL9K_BATTERY_LOW_THRESHOLD='10'
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=''
 POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%F{014}\u2570%F{cyan}\uF460%F{073}\uF460%F{109}\uF460%f "
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon battery context dir vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status ip custom_wifi_signal ram load virtualenv)
 
 #POWERLEVEL9K_SHORTEN_STRATEGY="truncate_middle"
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
@@ -72,7 +72,9 @@ POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND='yellow'
 POWERLEVEL9K_SHOW_CHANGESET='true'
 
 POWERLEVEL9K_STATUS_VERBOSE=true
-export DEFAULT_USER="$USER"
+
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon battery context dir vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status ip custom_wifi_signal ram load virtualenv)
 
 # Uncomment the following line to change how often to auto-update (in days).
 export UPDATE_ZSH_DAYS=14
@@ -107,7 +109,6 @@ export UPDATE_ZSH_DAYS=14
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  git
   colorize
   colored-man-pages
   zsh-autosuggestions
@@ -115,8 +116,6 @@ plugins=(
   sudo
   python
   virtualenv
-  docker
-  docker-compose
 )
 
 source $ZSH/oh-my-zsh.sh
