@@ -18,3 +18,7 @@ $ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 I use `oh-my-zsh` for zsh customization. To install oh-my-zsh:
 
 $ sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+
+Then install Powerlevel9k theme:
+
+$ git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
