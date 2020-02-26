@@ -1,3 +1,7 @@
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Vim configuration file
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 set nocompatible
 filetype off
 
@@ -8,47 +12,42 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-" vundle packages
-Plugin 'xoria256.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'edkolev/tmuxline.vim'
-Plugin 'ctrlp.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/nerdtree'
-Plugin 'PProvost/vim-ps1'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
-Plugin 'chr4/nginx.vim'
-Plugin 'iamcco/markdown-preview.vim'
+Plugin 'ryanoasis/vim-devicons'
 
-call vundle#end()
+call vundle#end() "required,  all packages must appear above this line
 
 " vim options
-syntax on
 filetype plugin indent on
 set autoindent
+syntax on
 
 " color settings
-set t_Co=256
+"set t_Co=256
 
 " Set vim colorscheme based on iTerm profile
-let iterm_profile = $ITERM_PROFILE
-if iterm_profile == "macOS Smyck"
-  colorscheme smyck
-elseif iterm_profile == "Solarized Dark"
-  colorscheme solarized
-else
+"let iterm_profile = $ITERM_PROFILE
+"if iterm_profile == "macOS Smyck"
+"  colorscheme smyck
+"elseif iterm_profile == "Solarized Dark"
+"  colorscheme solarized
+"else
 "  colorscheme darkZ
-endif
+"endif
 
 set autoread
 set expandtab
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
-set showtabline=1
-set number
+set showtabline=2
+set relativenumber
 set hlsearch
 set laststatus=2
 set splitbelow
@@ -104,10 +103,12 @@ abbr Q q
 abbr Wq wq
 
 " vim-airline configuration
+let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
-let g:airline_theme = "hybridline"
+"let g:airline_theme = "hybridline"
+let g:airline_theme = "angr"
 
-if iterm_profile == "Solarized Dark"
-  let g:airline_theme = "solarized"
-  let g:airline_solarized_bg = "dark"
-endif
+"if iterm_profile == "Solarized Dark"
+"  let g:airline_theme = "solarized"
+"  let g:airline_solarized_bg = "dark"
+"endif
