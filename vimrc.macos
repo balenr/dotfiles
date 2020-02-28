@@ -1,24 +1,23 @@
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Vim configuration file
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Vim configuration file
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 set nocompatible
 filetype off
 
-" init vundle
-set rtp+=~/.vim/bundle/Vundle.vim
+" initialize vundle
+set runtimepath+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'tpope/vim-fugitive'
+" Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/nerdtree'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-repeat'
+" Plugin 'tpope/vim-surround'
+" Plugin 'tpope/vim-repeat'
 Plugin 'ryanoasis/vim-devicons'
 
 call vundle#end() "required,  all packages must appear above this line
@@ -29,30 +28,20 @@ set autoindent
 syntax on
 
 " color settings
-"set t_Co=256
-
-" Set vim colorscheme based on iTerm profile
-"let iterm_profile = $ITERM_PROFILE
-"if iterm_profile == "macOS Smyck"
-"  colorscheme smyck
-"elseif iterm_profile == "Solarized Dark"
-"  colorscheme solarized
-"else
-"  colorscheme darkZ
-"endif
+set background=dark
+colorscheme peaksea
 
 set autoread
-set expandtab
 set tabstop=2
-set softtabstop=2
-set shiftwidth=2
-set showtabline=2
-set relativenumber
-set hlsearch
-set laststatus=2
-set splitbelow
-set splitright
-set noshowmode
+set shiftwidth=2 " indenting is 2 spaces, should the same as softtabstop for consistency
+set softtabstop=2 " number of spaces inserted when using tab
+set expandtab " use spaces instead of actual tab character
+set number " show line numbers
+set relativenumber " use relative line numbers
+set nohlsearch " disable search highlighting
+set laststatus=2 " always show status bar
+set showtabline=2 " always show tab bar at the top
+set noshowmode " because the normal showmode conflicts with vim-airline
 
 "set cursorline
 highlight CursorLine cterm=NONE ctermbg=darkblue ctermfg=white guibg=darkblue ctermfg=white
@@ -83,10 +72,10 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
 " disable arrow keys to force using hjkl
-"noremap <Up> <Nop>
-"noremap <Down> <Nop>
-"noremap <Left> <Nop>
-"noremap <Right> <Nop>
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>
 
 " NERDTreeToggle thru Ctrl-n
 map <C-n> :NERDTreeToggle<CR>
@@ -105,10 +94,4 @@ abbr Wq wq
 " vim-airline configuration
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
-"let g:airline_theme = "hybridline"
-let g:airline_theme = "angr"
-
-"if iterm_profile == "Solarized Dark"
-"  let g:airline_theme = "solarized"
-"  let g:airline_solarized_bg = "dark"
-"endif
+let g:airline_theme = "peaksea"
