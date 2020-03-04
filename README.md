@@ -32,4 +32,4 @@ I use `oh-my-zsh` for zsh customization. To install oh-my-zsh:
 
 ### Install Powerlevel9k theme:
 
-`$ git clone https://github.com/bhilburn/powerlevel9k.git $ZSH_CUSTOM/themes/powerlevel9k`
+`$ git clone https://github.com/powerlevel9k/powerlevel9k.git $ZSH_CUSTOM/themes/powerlevel9k`
