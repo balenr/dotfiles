@@ -78,7 +78,7 @@ noremap <Left> <Nop>
 noremap <Right> <Nop>
 
 " NERDTreeToggle thru Ctrl-n
-map <C-n> :NERDTreeToggle<CR>
+noremap <C-n> :NERDTreeToggle<CR>
 
 " Enable folding
 set foldmethod=indent
@@ -88,8 +88,8 @@ set foldlevel=99
 nnoremap <space> za
 
 " abbreviations
-abbr Q q
-abbr Wq wq
+cabbrev Q q
+cabbrev Wq wq
 
 " vim-airline configuration
 let g:airline#extensions#tabline#enabled = 1

@@ -5,13 +5,8 @@ export DEFAULT_USER="$USER"
 
 TERM=xterm-256color
 
-# Set name of the theme to load. Optionally, if you set this to "random"
-# it'll load a random theme each time that oh-my-zsh is loaded.
-# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-
+# Configure powerlevel9k/powerlevel10k prompt before sourcing the theme
 POWERLEVEL9K_MODE='nerdfont-complete'
-ZSH_THEME="powerlevel10k/powerlevel10k"
-
 POWERLEVEL9K_IP_INTERFACE='e.*'
 POWERLEVEL9K_CONTEXT_TEMPLATE='%n'
 POWERLEVEL9K_CUSTOM_WIFI_SIGNAL="zsh_wifi_signal"
@@ -76,6 +71,11 @@ POWERLEVEL9K_STATUS_VERBOSE=true
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon battery context dir vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status ip custom_wifi_signal virtualenv)
 
+# Set name of the theme to load. Optionally, if you set this to "random"
+# it'll load a random theme each time that oh-my-zsh is loaded.
+# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+ZSH_THEME="powerlevel10k/powerlevel10k"
+
 # Uncomment the following line to change how often to auto-update (in days).
 # UPDATE_ZSH_DAYS=30
 
@@ -136,5 +136,3 @@ export PATH="/usr/local/opt/ruby/bin:$PATH"
 export LDFLAGS="-L/usr/local/opt/ruby/lib"
 export CPPFLAGS="-I/usr/local/opt/ruby/include"
 export PKG_CONFIG_PATH="/usr/local/opt/ruby/lib/pkgconfig"
-
-# test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
