@@ -1,11 +1,17 @@
-# My dotfiles
+# René's dotfiles for macOS and FreeBSD
 
-Contains configuration files for:
+These are my configuration files (dotfiles) for macOS and FreeBSD. Use at your own risk.
+
+Most of the files are used on macOS, but should work on other \*nix like systems as well.
+
+Currently the repository contains configuration files for:
+
 - vim
 - tmux
-- zsh
+- zsh (both macOS and FreeBSD)
+- X11
 
-## Regarding vim
+## Vim Vundle
 
 I use `Vundle` for plugin management, so get that first. Then run `:PluginInstall` from vim.
 
@@ -18,7 +24,7 @@ $ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 After installing Vundle open `vim` and run `:PluginInstall`.
 
-## Regarding zsh
+## Zsh
 
 I use `oh-my-zsh` for zsh customization. To install oh-my-zsh:
 
