@@ -1,5 +1,7 @@
 # René's dotfiles for macOS and FreeBSD
 
+![alt text](https://img.shields.io/github/last-commit/balenr/dotfiles "Last commit")
+
 These are my configuration files (dotfiles) for macOS and FreeBSD. Use at your own risk.
 
 Most of the files are used on macOS, but should work on other \*nix like systems as well.
