@@ -45,9 +45,6 @@ set showtabline=2 " always show tab bar at the top
 set noshowmode " because the normal showmode conflicts with vim-airline
 set mouse=nivr
 
-"set cursorline
-highlight CursorLine cterm=NONE ctermbg=darkblue ctermfg=white guibg=darkblue ctermfg=white
-
 " split navigations
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
@@ -87,4 +84,3 @@ cabbrev Wq wq
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 let g:airline_theme = "peaksea"
-
