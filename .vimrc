@@ -44,6 +44,7 @@ set laststatus=2 " always show status bar
 set showtabline=2 " always show tab bar at the top
 set noshowmode " because the normal showmode conflicts with vim-airline
 set mouse=nivr
+set cmdheight=2
 
 " split navigations
 nnoremap <C-J> <C-W><C-J>
