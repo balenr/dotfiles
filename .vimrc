@@ -11,14 +11,10 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'dracula/vim',{'name':'dracula'}
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'ctrlpvim/ctrlp.vim'
-" Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/nerdtree'
-" Plugin 'tpope/vim-surround'
-" Plugin 'tpope/vim-repeat'
 Plugin 'vimwiki/vimwiki'
 Plugin 'ryanoasis/vim-devicons'
 
