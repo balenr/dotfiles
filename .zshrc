@@ -1,75 +1,25 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block, everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # Path to your oh-my-zsh
 export ZSH=$HOME/.oh-my-zsh
-
 export DEFAULT_USER="$USER"
 
-TERM=xterm-256color
+# # Set name of the theme to load. Optionally, if you set this to "random"
+# # it'll load a random theme each time that oh-my-zsh is loaded.
+# # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 
-# Configure powerlevel9k/powerlevel10k prompt before sourcing the theme
-zsh_wifi_signal(){
-        local output=$(/System/Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resources/airport -I)
-        local airport=$(echo $output | grep 'AirPort' | awk -F': ' '{print $2}')
+#if [ "$TERM_PROGRAM" = "iTerm.app" ]; then
+#  ZSH_THEME="powerlevel10k/powerlevel10k"
+#else
+#  ZSH_THEME="muse"
+#fi
 
-        if [ "$airport" = "Off" ]; then
-                local color='%F{black}'
-                echo -n "%{$color%}Wifi Off"
-        else
-                local ssid=$(echo $output | grep ' SSID' | awk -F': ' '{print $2}')
-                local speed=$(echo $output | grep 'lastTxRate' | awk -F': ' '{print $2}')
-                local color='%F{black}'
-
-                [[ $speed -gt 100 ]] && color='%F{black}'
-                [[ $speed -lt 50 ]] && color='%F{red}'
-
-                echo -n "%{$color%}$speed Mbps \uf1eb%{%f%}" # removed char not in my PowerLine font
-        fi
-}
-
-POWERLEVEL9K_MODE='nerdfont-complete'
-POWERLEVEL9K_IP_INTERFACE='e.*'
-POWERLEVEL9K_CONTEXT_TEMPLATE='%n'
-POWERLEVEL9K_CUSTOM_WIFI_SIGNAL="zsh_wifi_signal"
-POWERLEVEL9K_CUSTOM_WIFI_SIGNAL_BACKGROUND="white"
-POWERLEVEL9K_CUSTOM_WIFI_SIGNAL_FOREGROUND="black"
-POWERLEVEL9K_TIME_ICON=''
-POWERLEVEL9K_TIME_FORMAT='%D{\uF017 %H:%M \uF073 %d-%m-%y}'
-POWERLEVEL9K_BATTERY_CHARGING='yellow'
-POWERLEVEL9K_BATTERY_CHARGED='green'
-POWERLEVEL9K_BATTERY_DISCONNECTED='$DEFAULT_COLOR'
-POWERLEVEL9K_BATTERY_LOW_COLOR='red'
-POWERLEVEL9K_BATTERY_LOW_THRESHOLD='10'
-POWERLEVEL9K_PROMPT_ON_NEWLINE=true
-POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=''
-POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%F{014}\u2570%F{cyan}\uF460%F{073}\uF460%F{109}\uF460%f "
-POWERLEVEL9K_SHORTEN_DIR_LENGTH='1'
-POWERLEVEL9K_RAM_BACKGROUND='yellow'
-#POWERLEVEL9K_OS_ICON_BACKGROUND='white'
-#POWERLEVEL9K_OS_ICON_FOREGROUND='grey'
-POWERLEVEL9K_LOAD_NORMAL_BACKGROUND='white'
-POWERLEVEL9K_LOAD_NORMAL_FOREGROUND='black'
-POWERLEVEL9K_LOAD_WARNING_BACKGROUND='white'
-POWERLEVEL9K_LOAD_WARNING_FOREGROUND='yellow'
-POWERLEVEL9K_LOAD_CRITICAL_BACKGROUND='white'
-POWERLEVEL9K_LOAD_CRITICAL_FOREGROUND='red'
-POWERLEVEL9K_LOAD_CRITICAL_VISUAL_IDENTIFIER_COLOR="red"
-POWERLEVEL9K_LOAD_WARNING_VISUAL_IDENTIFIER_COLOR="yellow"
-POWERLEVEL9K_LOAD_NORMAL_VISUAL_IDENTIFIER_COLOR="green"
-POWERLEVEL9K_VCS_MODIFIED_BACKGROUND='yellow'
-POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND='yellow'
-POWERLEVEL9K_SHOW_CHANGESET='true'
-POWERLEVEL9K_STATUS_VERBOSE='true'
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon battery context dir vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status ip custom_wifi_signal virtualenv)
-
-# Set name of the theme to load. Optionally, if you set this to "random"
-# it'll load a random theme each time that oh-my-zsh is loaded.
-# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-
-if [ "$TERM_PROGRAM" = "iTerm.app" ]; then
-  ZSH_THEME="powerlevel10k/powerlevel10k"
-else
-  ZSH_THEME="muse"
-fi
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Uncomment the following line to change how often to auto-update (in days).
 # UPDATE_ZSH_DAYS=30
@@ -131,3 +81,14 @@ export PATH="/usr/local/opt/ruby/bin:$PATH"
 export LDFLAGS="-L/usr/local/opt/ruby/lib"
 export CPPFLAGS="-I/usr/local/opt/ruby/include"
 export PKG_CONFIG_PATH="/usr/local/opt/ruby/lib/pkgconfig"
+
+source $(brew --prefix)/opt/chruby/share/chruby/chruby.sh
+source $(brew --prefix)/opt/chruby/share/chruby/auto.sh
+chruby ruby-3.1.2
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+export PATH="/usr/local/sbin:$PATH"
+
+export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
