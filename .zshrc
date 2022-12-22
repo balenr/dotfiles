@@ -63,10 +63,6 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-# User configuration
-export PATH="/usr/local/sbin:$PATH"
-export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
-
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
 
@@ -87,6 +83,10 @@ export PKG_CONFIG_PATH="/usr/local/opt/ruby/lib/pkgconfig"
 source $(brew --prefix)/opt/chruby/share/chruby/chruby.sh
 source $(brew --prefix)/opt/chruby/share/chruby/auto.sh
 chruby ruby-3.1.2
+
+# User configuration
+export PATH="/usr/local/sbin:$PATH"
+export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
