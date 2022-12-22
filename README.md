@@ -1,4 +1,4 @@
-# René's dotfiles for macOS and FreeBSD
+# René's dotfiles for macOS
 
 ![alt text](https://img.shields.io/github/last-commit/balenr/dotfiles "Last commit")
 
