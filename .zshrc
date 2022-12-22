@@ -64,6 +64,8 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
+export PATH="/usr/local/sbin:$PATH"
+export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
@@ -88,7 +90,3 @@ chruby ruby-3.1.2
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-export PATH="/usr/local/sbin:$PATH"
-
-export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
