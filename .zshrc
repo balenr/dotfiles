@@ -88,5 +88,8 @@ chruby ruby-3.1.2
 export PATH="/usr/local/sbin:$PATH"
 export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 
+# Bitwarden
+export BW_SESSION="5ONkSuF2BSVlvkAKUTq1vOqJBrIl+OBHmvZ1MmoZ1HlqtOVPu2t8lpzh/NEAzw8lI0Wj3OJQfa0/Hvmsz/jVsw=="
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
