@@ -1,8 +1,8 @@
-# René's dotfiles for macOS
+# René's "Dotfiles" for macOS
 
 ![alt text](https://img.shields.io/github/last-commit/balenr/dotfiles "Last commit")
 
-These are my configuration files (dotfiles) for macOS and FreeBSD. Use at your own risk.
+These are my configuration files (dotfiles) for macOS. Use at your own risk.
 
 Most of the files are used on macOS, but should work on other \*nix like systems as well.
 
