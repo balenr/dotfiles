@@ -63,33 +63,23 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
+# User configuration
+export PATH="/usr/local/sbin:$PATH"
+
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
 
-# Aliases
-alias sshconfig='vim ~/.ssh/config'
-alias zshrc='vim ~/.zshrc'
-alias reloadzsh='source ~/.zshrc'
-alias down='cd ~/Downloads'
-alias lc='colorls'
-
-# Settings for Ruby from HomeBrew
-export PATH="/usr/local/lib/ruby/gems/2.6.0/bin:$PATH"
-export PATH="/usr/local/opt/ruby/bin:$PATH"
-export LDFLAGS="-L/usr/local/opt/ruby/lib"
-export CPPFLAGS="-I/usr/local/opt/ruby/include"
-export PKG_CONFIG_PATH="/usr/local/opt/ruby/lib/pkgconfig"
-
-source $(brew --prefix)/opt/chruby/share/chruby/chruby.sh
-source $(brew --prefix)/opt/chruby/share/chruby/auto.sh
-chruby ruby-3.1.2
-
-# User configuration
-export PATH="/usr/local/sbin:$PATH"
+# Ansible
 export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
+
+# Import aliases
+[[ ! -f ~/.zsh/aliases.zsh ]] || source ~/.zsh/aliases.zsh
+
+# Homebrew
+[[ ! -f ~/.zsh/homebrew.zsh ]] || source ~/.zsh/homebrew.zsh
 
 # Bitwarden
 [[ ! -f ~/.bw_session.zsh ]] || source ~/.bw_session.zsh
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# To customize prompt, run `p10k configure` or edit ~/.zsh/p10k.zsh.
+[[ ! -f ~/.zsh/p10k.zsh ]] || source ~/.zsh/p10k.zsh
