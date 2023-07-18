@@ -1,43 +1,37 @@
-# René's "Dotfiles" for macOS
+# dotfiles
 
 ![alt text](https://img.shields.io/github/last-commit/balenr/dotfiles "Last commit")
 
 These are my configuration files (dotfiles) for macOS. Use at your own risk.
 
-Most of the files are used on macOS, but should work on other \*nix like systems as well.
+Most of these files are used on macOS, but may work on other \*nix like systems as well.
 
 Currently the repository contains configuration files for:
 
-- vim
-- tmux
-- zsh (both macOS and FreeBSD)
-- X11
-
-## Vim Vundle
-
-I use `Vundle` for plugin management, so get that first. Then run `:PluginInstall` from vim.
-
-### To install Vundle
-
-```
-$ mkdir -p ~/.vim/bundle
-$ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-```
-
-After installing Vundle open `vim` and run `:PluginInstall`.
-
+- [Zsh](https://zsh.org) - Shell for macOS and Linux
+- [Tmux](https://github.com/tmux/tmux) - Terminal Multiplexer
+- [Homebrew](https://brew.sh) - Package manager for macOS and Linux
 ## Zsh
-
-I use `oh-my-zsh` for zsh customization. To install oh-my-zsh:
+Install `oh-my-zsh`:
 
 `$ sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"`
 
-### Enable Plugins (zsh-autosuggestions & zsh-syntax-highlighting)
+Enable Plugins (zsh-autosuggestions & zsh-syntax-highlighting)
 
 `$ git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions`
 
 `$ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting`
 
-### Install Powerlevel9k theme:
+## Tmux
+Install [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm):
 
-`$ git clone https://github.com/powerlevel9k/powerlevel9k.git $ZSH_CUSTOM/themes/powerlevel9k`
+`$ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm`
+
+## Homebrew
+Install Homebrew:
+
+`$ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
+
+The run:
+
+`$ brew bundle ~/.dotfiles/Brewfile`
