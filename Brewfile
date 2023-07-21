@@ -7,8 +7,6 @@ tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "homebrew/services"
 tap "microsoft/git"
-# Tool for generating GNU Standards-compliant Makefiles
-brew "automake"
 # GNU database manager
 brew "gdbm"
 # Library for command-line editing
@@ -17,32 +15,20 @@ brew "readline"
 brew "azure-cli"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
-# Parser generator
-brew "bison"
 # Resource monitor. C++ version and continuation of bashtop and bpytop
 brew "btop"
-# Core application library for C
-brew "glib"
-# Portable Foreign Function Interface library
-brew "libffi"
-# Cryptography and SSL/TLS Toolkit
-brew "openssl@1.1"
 # Sexy ANSI fonts for the console
 brew "cfonts"
-# Ruby environment tool
-brew "chruby"
 # Console Matrix
 brew "cmatrix"
 # Configurable talking characters in ASCII art
 brew "cowsay"
+# Cryptography and SSL/TLS Toolkit
+brew "openssl@1.1"
 # Modern replacement for 'ls'
 brew "exa"
 # Simple, fast and user-friendly alternative to find
 brew "fd"
-# Banner-like program prints strings as ASCII art
-brew "figlet"
-# I/O benchmark and stress test
-brew "fio"
 # User-friendly command-line shell for UNIX-like operating systems
 brew "fish"
 # Infamous electronic fortune-cookie generator
@@ -51,82 +37,40 @@ brew "fortune"
 brew "fzf"
 # Disk usage analyzer with console interface written in Go
 brew "gdu"
-# GitHub command-line tool
-brew "gh"
 # Distributed revision control system
 brew "git"
-# GNU implementation of the famous stream editor
-brew "gnu-sed"
-# GNU Transport Layer Security (TLS) Library
-brew "gnutls"
-# Open source programming language to build simple/reliable/efficient software
-brew "go"
 # Tool for glamorous shell scripts
 brew "gum"
-# OpenType text shaping engine
-brew "harfbuzz"
-# Kubernetes package manager
-brew "helm"
 # Improved top (interactive process viewer)
 brew "htop"
 # Update of iperf: measures TCP, UDP, and SCTP bandwidth
 brew "iperf3"
-# Lightweight and flexible command-line JSON processor
-brew "jq"
-# Network authentication protocol
-brew "krb5"
 # Simple terminal UI for git commands
 brew "lazygit"
 # Terminal file manager
 brew "lf"
-# YAML Parser
-brew "libyaml"
 # Rainbows and unicorns in your console!
 brew "lolcat"
 # Mac App Store command-line interface
 brew "mas"
-# Intercept, modify, replay, save HTTP/S traffic
-brew "mitmproxy"
 # Remote terminal application
 brew "mosh"
-# 'traceroute' and 'ping' in a single tool
-brew "mtr"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
-# HTTP/2 C Library
-brew "nghttp2"
 # Port scanning utility for large networks
 brew "nmap"
-# Swiss-army knife of markup format conversion
-brew "pandoc"
-# Pinentry for GPG on Mac
-brew "pinentry-mac"
-# Search tool like grep and The Silver Searcher
-brew "ripgrep"
-# Install Ruby, JRuby, Rubinius, TruffleRuby, or mruby
-brew "ruby-install"
-# Database of common MIME types
-brew "shared-mime-info"
 # Test SSL/TLS enabled services to discover supported cipher suites
 brew "sslscan"
 # Cross-shell prompt for astronauts
 brew "starship"
-# User interface to the TELNET protocol
-brew "telnet"
 # Tool to build, change, and version infrastructure
 brew "terraform"
 # Terminal multiplexer
 brew "tmux"
-# Display directories as trees (with optional color/HTML output)
-brew "tree"
 # Shell extension to navigate your filesystem faster
 brew "zoxide"
-# UNIX shell (command interpreter)
-brew "zsh"
 # Packer
 brew "hashicorp/tap/packer"
-# Vault
-brew "hashicorp/tap/vault"
 # GPU-accelerated terminal emulator
 cask "alacritty"
 # Automatic tiling window manager similar to xmonad
@@ -155,7 +99,6 @@ mas "iStat Menus", id: 1319778037
 mas "Ka-Block!", id: 1335413823
 mas "Keynote", id: 409183694
 mas "NordVPN", id: 905953485
-mas "NordVPN IKE", id: 1116599239
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Pluralsight", id: 431748264
