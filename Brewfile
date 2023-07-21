@@ -1,4 +1,3 @@
-tap "azure/bicep", "https://github.com/azure/bicep"
 tap "epk/epk"
 tap "hashicorp/tap"
 tap "homebrew/bundle"
@@ -7,34 +6,27 @@ tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "homebrew/services"
-tap "jandedobbeleer/oh-my-posh"
 tap "microsoft/git"
-# GNU database manager
-brew "gdbm"
-# Aquarium animation in ASCII art
-brew "asciiquarium"
 # Tool for generating GNU Standards-compliant Makefiles
 brew "automake"
-# Cryptography and SSL/TLS Toolkit
-brew "openssl@1.1"
+# GNU database manager
+brew "gdbm"
 # Library for command-line editing
 brew "readline"
-# Official Amazon AWS command-line interface
-brew "awscli"
 # Microsoft Azure CLI 2.0
 brew "azure-cli"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
 # Parser generator
 brew "bison"
-# Secure and free password manager for all of your devices
-brew "bitwarden-cli"
 # Resource monitor. C++ version and continuation of bashtop and bpytop
 brew "btop"
 # Core application library for C
 brew "glib"
 # Portable Foreign Function Interface library
 brew "libffi"
+# Cryptography and SSL/TLS Toolkit
+brew "openssl@1.1"
 # Sexy ANSI fonts for the console
 brew "cfonts"
 # Ruby environment tool
@@ -47,12 +39,6 @@ brew "cowsay"
 brew "exa"
 # Simple, fast and user-friendly alternative to find
 brew "fd"
-# GNU Transport Layer Security (TLS) Library
-brew "gnutls"
-# OpenType text shaping engine
-brew "harfbuzz"
-# Play, record, convert, and stream audio and video
-brew "ffmpeg"
 # Banner-like program prints strings as ASCII art
 brew "figlet"
 # I/O benchmark and stress test
@@ -71,22 +57,18 @@ brew "gh"
 brew "git"
 # GNU implementation of the famous stream editor
 brew "gnu-sed"
-# GNU Pretty Good Privacy (PGP) package
-brew "gnupg"
+# GNU Transport Layer Security (TLS) Library
+brew "gnutls"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
 # Tool for glamorous shell scripts
 brew "gum"
+# OpenType text shaping engine
+brew "harfbuzz"
 # Kubernetes package manager
 brew "helm"
 # Improved top (interactive process viewer)
 brew "htop"
-# Configurable static site generator
-brew "hugo"
-# Database of common MIME types
-brew "shared-mime-info"
-# Tools and libraries to manipulate images in many formats
-brew "imagemagick"
 # Update of iperf: measures TCP, UDP, and SCTP bandwidth
 brew "iperf3"
 # Lightweight and flexible command-line JSON processor
@@ -101,18 +83,14 @@ brew "lf"
 brew "libyaml"
 # Rainbows and unicorns in your console!
 brew "lolcat"
-# Clone of ls with colorful output, file type icons, and more
-brew "lsd"
-# Terminal-based visual file manager
-brew "midnight-commander"
+# Mac App Store command-line interface
+brew "mas"
 # Intercept, modify, replay, save HTTP/S traffic
 brew "mitmproxy"
 # Remote terminal application
 brew "mosh"
 # 'traceroute' and 'ping' in a single tool
 brew "mtr"
-# Fast, highly customisable system info script
-brew "neofetch"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
 # HTTP/2 C Library
@@ -127,6 +105,8 @@ brew "pinentry-mac"
 brew "ripgrep"
 # Install Ruby, JRuby, Rubinius, TruffleRuby, or mruby
 brew "ruby-install"
+# Database of common MIME types
+brew "shared-mime-info"
 # Test SSL/TLS enabled services to discover supported cipher suites
 brew "sslscan"
 # Cross-shell prompt for astronauts
@@ -139,8 +119,6 @@ brew "terraform"
 brew "tmux"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
-# Download YouTube videos from the command-line
-brew "youtube-dl"
 # Shell extension to navigate your filesystem faster
 brew "zoxide"
 # UNIX shell (command interpreter)
@@ -153,39 +131,42 @@ brew "hashicorp/tap/vault"
 cask "alacritty"
 # Automatic tiling window manager similar to xmonad
 cask "amethyst"
-# GUI app for Homebrew
-cask "cakebrew"
-# Browser for SQLite databases
-cask "db-browser-for-sqlite"
-# Network scanner
-cask "fing-cli"
-# Web browser
-cask "firefox"
 cask "font-meslo-nerd-font"
 cask "font-petit-formal-script"
-cask "font-robotomono-nerd-font"
-cask "font-sf-mono-nerd-font"
 cask "git-credential-manager-core"
-# Desktop automation application
-cask "hammerspoon"
 # Password manager app
 cask "keepassxc"
-# App to write, plan, collaborate, and get organized
-cask "notion"
 # Command-line shell and scripting language
 cask "powershell"
-# Command-line shell and scripting language
-cask "powershell-preview"
-# QuickLook generator for Markdown files
-cask "qlmarkdown"
 # Development environment
 cask "vagrant"
 # Gives Vagrant VMware plugin access to various VMware functionalities
 cask "vagrant-vmware-utility"
+# Open-source code editor
+cask "visual-studio-code"
+mas "Apple Configurator", id: 1037126344
+mas "Bitwarden", id: 1352778147
+mas "Disk Speed Test", id: 425264550
+mas "Double Shot", id: 1076145960
+mas "DuckDuckGo Privacy for Safari", id: 1482920575
+mas "GarageBand", id: 682658836
+mas "iMovie", id: 408981434
+mas "iStat Menus", id: 1319778037
+mas "Ka-Block!", id: 1335413823
+mas "Keynote", id: 409183694
+mas "NordVPN", id: 905953485
+mas "NordVPN IKE", id: 1116599239
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
+mas "Pluralsight", id: 431748264
+mas "The Unarchiver", id: 425424353
+mas "VCE Simulator", id: 1459356760
+mas "WhatsApp", id: 1147396723
 vscode "aaron-bond.better-comments"
 vscode "albert.TabOut"
 vscode "bierner.emojisense"
 vscode "bierner.markdown-preview-github-styles"
+vscode "Catppuccin.catppuccin-vsc"
 vscode "codezombiech.gitignore"
 vscode "donjayamanne.githistory"
 vscode "eamodio.gitlens"
