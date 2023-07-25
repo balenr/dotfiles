@@ -35,3 +35,7 @@ Install Homebrew:
 The run:
 
 `$ brew bundle ~/.dotfiles/Brewfile`
+
+## TODO
+- Configure Dotbot
+
