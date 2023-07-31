@@ -12,3 +12,14 @@
     - command: ./setup_homebrew.zsh
       stdout: true
       stderr: true
+
+- link:
+    ~/.zshrc:
+      path: zsh/zshrc
+
+    ~/.zshenv:
+      path: zsh/zshenv
+
+    ~/.config/bat:
+      create: true
+      path: bat
