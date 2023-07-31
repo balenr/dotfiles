@@ -5,7 +5,10 @@
 - clean: ['~']
 
 - create:
-    ~/Work
+    - ~/Work
 
 - shell:
-  - [git submodule update --init --recursive, Installing submodules]
+#  - [git submodule update --init --recursive, Installing submodules]
+    - command: ./setup_homebrew.zsh
+      stdout: true
+      stderr: true
