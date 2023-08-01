@@ -1,3 +1,4 @@
+tap "arl/arl"
 tap "epk/epk"
 tap "hashicorp/tap"
 tap "homebrew/bundle"
@@ -23,6 +24,8 @@ brew "cfonts"
 brew "cmatrix"
 # Configurable talking characters in ASCII art
 brew "cowsay"
+# Top-like interface for container metrics
+brew "ctop"
 # Cryptography and SSL/TLS Toolkit
 brew "openssl@1.1"
 # Modern replacement for 'ls'
@@ -59,6 +62,8 @@ brew "mosh"
 brew "neovim"
 # Port scanning utility for large networks
 brew "nmap"
+# Search tool like grep and The Silver Searcher
+brew "ripgrep"
 # Test SSL/TLS enabled services to discover supported cipher suites
 brew "sslscan"
 # Cross-shell prompt for astronauts
@@ -69,6 +74,8 @@ brew "terraform"
 brew "tmux"
 # Shell extension to navigate your filesystem faster
 brew "zoxide"
+# Git in your tmux status bar.
+brew "arl/arl/gitmux"
 # Packer
 brew "hashicorp/tap/packer"
 # GPU-accelerated terminal emulator
@@ -82,6 +89,8 @@ cask "git-credential-manager-core"
 cask "keepassxc"
 # Command-line shell and scripting language
 cask "powershell"
+# Control your tools with a few keystrokes
+cask "raycast"
 # Development environment
 cask "vagrant"
 # Gives Vagrant VMware plugin access to various VMware functionalities
@@ -102,6 +111,7 @@ mas "NordVPN", id: 905953485
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Pluralsight", id: 431748264
+mas "Speedtest", id: 1153157709
 mas "The Unarchiver", id: 425424353
 mas "VCE Simulator", id: 1459356760
 mas "WhatsApp", id: 1147396723
