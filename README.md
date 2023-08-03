@@ -1,41 +1,63 @@
 # dotfiles
 
-![alt text](https://img.shields.io/github/last-commit/balenr/dotfiles "Last commit")
+![GitHub last commit](https://img.shields.io/github/last-commit/balenr/dotfiles)
+![GitHub issues](https://img.shields.io/github/issues/balenr/dotfiles)
 
-These are my configuration files (dotfiles) for macOS. Use at your own risk.
+These are my configuration files (dotfiles) for macOS. Use at your own risk. 😉
 
 Most of these files are used on macOS, but may work on other \*nix like systems as well.
+
+## Software
 
 Currently the repository contains configuration files for:
 
 - [Zsh](https://zsh.org) - Shell for macOS and Linux
 - [Tmux](https://github.com/tmux/tmux) - Terminal Multiplexer
 - [Homebrew](https://brew.sh) - Package manager for macOS and Linux
-## Zsh
+- [Bat](https://github.com/sharkdp/bat) - A cat clone with syntax highlighing
+
+## Installation
+
+### Zsh
+
 Install `oh-my-zsh`:
 
-`$ sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"`
+```shell
+/bin/bash -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+```
 
-Enable Plugins (zsh-autosuggestions & zsh-syntax-highlighting)
+Enable Zsh plugins (zsh-autosuggestions & zsh-syntax-highlighting)
 
-`$ git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions`
+```shell
+git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
 
-`$ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting`
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
+```
 
-## Tmux
-Install [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm):
+### Tmux
 
-`$ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm`
+Install Tmux Plugin Manager:
 
-## Homebrew
+```shell
+git clone https://github.com/tmux-plugins/tpm $HOME/.tmux/plugins/tpm
+```
+
+### Homebrew
+
 Install Homebrew:
 
-`$ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
+```shell
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
 
-The run:
+Then run the brew bundle command to install all applications in the Brewfile:
 
-`$ brew bundle ~/.dotfiles/Brewfile`
+```shell
+cd ~/.dotfiles
+brew bundle --verbose
+```
 
 ## TODO
-- Configure Dotbot
 
+- Automate installation of Homebrew, TPM and Oh-my-Zsh with Dotbot
+- Add other dotfiles to Dotbot
