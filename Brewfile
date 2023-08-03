@@ -62,6 +62,8 @@ brew "mosh"
 brew "neovim"
 # Port scanning utility for large networks
 brew "nmap"
+# Swiss-army knife of markup format conversion
+brew "pandoc"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
 # Test SSL/TLS enabled services to discover supported cipher suites
@@ -70,6 +72,8 @@ brew "sslscan"
 brew "starship"
 # Tool to build, change, and version infrastructure
 brew "terraform"
+# Simplified and community-driven man pages
+brew "tldr"
 # Terminal multiplexer
 brew "tmux"
 # Shell extension to navigate your filesystem faster
@@ -82,6 +86,8 @@ brew "hashicorp/tap/packer"
 cask "alacritty"
 # Automatic tiling window manager similar to xmonad
 cask "amethyst"
+# Compact TeX distribution as alternative to the full TeX Live / MacTeX
+cask "basictex"
 cask "font-meslo-nerd-font"
 cask "font-petit-formal-script"
 cask "git-credential-manager-core"
@@ -91,6 +97,8 @@ cask "keepassxc"
 cask "powershell"
 # Control your tools with a few keystrokes
 cask "raycast"
+# Graphical client for Git version control
+cask "sourcetree"
 # Development environment
 cask "vagrant"
 # Gives Vagrant VMware plugin access to various VMware functionalities
