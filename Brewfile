@@ -8,18 +8,30 @@ tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "homebrew/services"
 tap "microsoft/git"
+# Tool for generating GNU Standards-compliant Makefiles
+brew "automake"
 # GNU database manager
 brew "gdbm"
 # Library for command-line editing
 brew "readline"
+# General-purpose data compression with high compression ratio
+brew "xz"
 # Microsoft Azure CLI 2.0
 brew "azure-cli"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
+# Parser generator
+brew "bison"
 # Resource monitor. C++ version and continuation of bashtop and bpytop
 brew "btop"
 # Sexy ANSI fonts for the console
 brew "cfonts"
+# Ruby environment tool
+brew "chruby"
+# User-friendly command-line shell for UNIX-like operating systems
+brew "fish"
+# Thin wrapper around chruby to make it work with the Fish shell
+brew "chruby-fish"
 # Console Matrix
 brew "cmatrix"
 # Configurable talking characters in ASCII art
@@ -32,8 +44,6 @@ brew "openssl@1.1"
 brew "exa"
 # Simple, fast and user-friendly alternative to find
 brew "fd"
-# User-friendly command-line shell for UNIX-like operating systems
-brew "fish"
 # Infamous electronic fortune-cookie generator
 brew "fortune"
 # Command-line fuzzy finder written in Go
@@ -52,6 +62,10 @@ brew "iperf3"
 brew "lazygit"
 # Terminal file manager
 brew "lf"
+# Portable Foreign Function Interface library
+brew "libffi"
+# YAML Parser
+brew "libyaml"
 # Rainbows and unicorns in your console!
 brew "lolcat"
 # Mac App Store command-line interface
@@ -66,6 +80,8 @@ brew "nmap"
 brew "pandoc"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
+# Install Ruby, JRuby, Rubinius, TruffleRuby, or mruby
+brew "ruby-install"
 # Test SSL/TLS enabled services to discover supported cipher suites
 brew "sslscan"
 # Cross-shell prompt for astronauts
@@ -93,10 +109,12 @@ cask "font-petit-formal-script"
 cask "git-credential-manager-core"
 # Password manager app
 cask "keepassxc"
+# Tool to control external monitor brightness & volume
+cask "monitorcontrol"
+# Open-source software for live streaming and screen recording
+cask "obs"
 # Command-line shell and scripting language
 cask "powershell"
-# Control your tools with a few keystrokes
-cask "raycast"
 # Graphical client for Git version control
 cask "sourcetree"
 # Development environment
@@ -115,6 +133,7 @@ mas "iMovie", id: 408981434
 mas "iStat Menus", id: 1319778037
 mas "Ka-Block!", id: 1335413823
 mas "Keynote", id: 409183694
+mas "Magnet", id: 441258766
 mas "NordVPN", id: 905953485
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
