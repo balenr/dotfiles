@@ -38,8 +38,6 @@ brew "cmatrix"
 brew "cowsay"
 # Top-like interface for container metrics
 brew "ctop"
-# Cryptography and SSL/TLS Toolkit
-brew "openssl@1.1"
 # Modern replacement for 'ls'
 brew "exa"
 # Simple, fast and user-friendly alternative to find
@@ -50,10 +48,18 @@ brew "fortune"
 brew "fzf"
 # Disk usage analyzer with console interface written in Go
 brew "gdu"
+# GitHub command-line tool
+brew "gh"
 # Distributed revision control system
 brew "git"
+# GNU Pretty Good Privacy (PGP) package
+brew "gnupg"
+# Open source programming language to build simple/reliable/efficient software
+brew "go"
 # Tool for glamorous shell scripts
 brew "gum"
+# Kubernetes package manager
+brew "helm"
 # Improved top (interactive process viewer)
 brew "htop"
 # Update of iperf: measures TCP, UDP, and SCTP bandwidth
@@ -76,8 +82,14 @@ brew "mosh"
 brew "neovim"
 # Port scanning utility for large networks
 brew "nmap"
+# Cryptography and SSL/TLS Toolkit
+brew "openssl@1.1"
 # Swiss-army knife of markup format conversion
 brew "pandoc"
+# Pinentry for GPG on Mac
+brew "pinentry-mac"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.11"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
 # Install Ruby, JRuby, Rubinius, TruffleRuby, or mruby
@@ -88,8 +100,6 @@ brew "sslscan"
 brew "starship"
 # Tool to build, change, and version infrastructure
 brew "terraform"
-# Simplified and community-driven man pages
-brew "tldr"
 # Terminal multiplexer
 brew "tmux"
 # Shell extension to navigate your filesystem faster
