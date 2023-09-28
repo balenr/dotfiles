@@ -152,6 +152,7 @@ mas "Speedtest", id: 1153157709
 mas "The Unarchiver", id: 425424353
 mas "VCE Simulator", id: 1459356760
 mas "WhatsApp", id: 1147396723
+mas "WireGuard", id: 1451685025
 vscode "aaron-bond.better-comments"
 vscode "albert.TabOut"
 vscode "bierner.emojisense"
