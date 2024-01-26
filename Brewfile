@@ -10,12 +10,14 @@ tap "homebrew/services"
 tap "microsoft/git"
 # Tool for generating GNU Standards-compliant Makefiles
 brew "automake"
-# GNU database manager
-brew "gdbm"
 # Library for command-line editing
 brew "readline"
 # General-purpose data compression with high compression ratio
 brew "xz"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.11"
+# Official Amazon AWS command-line interface
+brew "awscli"
 # Microsoft Azure CLI 2.0
 brew "azure-cli"
 # Clone of cat(1) with syntax highlighting and Git integration
@@ -46,6 +48,8 @@ brew "fd"
 brew "fortune"
 # Command-line fuzzy finder written in Go
 brew "fzf"
+# GNU database manager
+brew "gdbm"
 # Disk usage analyzer with console interface written in Go
 brew "gdu"
 # GitHub command-line tool
@@ -88,8 +92,6 @@ brew "openssl@1.1"
 brew "pandoc"
 # Pinentry for GPG on Mac
 brew "pinentry-mac"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.11"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
 # Install Ruby, JRuby, Rubinius, TruffleRuby, or mruby
@@ -98,8 +100,6 @@ brew "ruby-install"
 brew "sslscan"
 # Cross-shell prompt for astronauts
 brew "starship"
-# Tool to build, change, and version infrastructure
-brew "terraform"
 # Terminal multiplexer
 brew "tmux"
 # Shell extension to navigate your filesystem faster
@@ -108,12 +108,18 @@ brew "zoxide"
 brew "arl/arl/gitmux"
 # Packer
 brew "hashicorp/tap/packer"
+# Terraform
+brew "hashicorp/tap/terraform"
+# Vault
+brew "hashicorp/tap/vault"
 # GPU-accelerated terminal emulator
 cask "alacritty"
 # Automatic tiling window manager similar to xmonad
 cask "amethyst"
 # Compact TeX distribution as alternative to the full TeX Live / MacTeX
 cask "basictex"
+# Web browser
+cask "firefox"
 cask "font-meslo-nerd-font"
 cask "font-petit-formal-script"
 cask "git-credential-manager-core"
@@ -133,6 +139,8 @@ cask "vagrant"
 cask "vagrant-vmware-utility"
 # Open-source code editor
 cask "visual-studio-code"
+# Network protocol analyzer
+cask "wireshark"
 mas "Apple Configurator", id: 1037126344
 mas "Bitwarden", id: 1352778147
 mas "Disk Speed Test", id: 425264550
@@ -154,7 +162,9 @@ mas "VCE Simulator", id: 1459356760
 mas "WhatsApp", id: 1147396723
 mas "WireGuard", id: 1451685025
 vscode "aaron-bond.better-comments"
+vscode "ahmadawais.shades-of-purple"
 vscode "albert.TabOut"
+vscode "BeardedBear.beardedicons"
 vscode "bierner.emojisense"
 vscode "bierner.markdown-preview-github-styles"
 vscode "Catppuccin.catppuccin-vsc"
@@ -181,5 +191,7 @@ vscode "ms-vscode.remote-explorer"
 vscode "ms-vscode.remote-repositories"
 vscode "redhat.ansible"
 vscode "redhat.vscode-yaml"
+vscode "run-at-scale.terraform-doc-snippets"
 vscode "sdras.night-owl"
+vscode "TakumiI.markdowntable"
 vscode "ultram4rine.vscode-choosealicense"
