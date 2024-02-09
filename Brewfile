@@ -10,6 +10,8 @@ tap "homebrew/services"
 tap "microsoft/git"
 # Tool for generating GNU Standards-compliant Makefiles
 brew "automake"
+# Cryptography and SSL/TLS Toolkit
+brew "openssl@3"
 # Library for command-line editing
 brew "readline"
 # General-purpose data compression with high compression ratio
@@ -120,11 +122,11 @@ cask "amethyst"
 cask "basictex"
 # Web browser
 cask "firefox"
-cask "font-meslo-nerd-font"
 cask "font-petit-formal-script"
-cask "git-credential-manager-core"
 # Password manager app
 cask "keepassxc"
+# Explorer for Azure Storage
+cask "microsoft-azure-storage-explorer"
 # Tool to control external monitor brightness & volume
 cask "monitorcontrol"
 # Open-source software for live streaming and screen recording
@@ -133,6 +135,8 @@ cask "obs"
 cask "powershell"
 # Graphical client for Git version control
 cask "sourcetree"
+# Mesh VPN based on Wireguard
+cask "tailscale"
 # Development environment
 cask "vagrant"
 # Gives Vagrant VMware plugin access to various VMware functionalities
@@ -141,13 +145,13 @@ cask "vagrant-vmware-utility"
 cask "visual-studio-code"
 # Network protocol analyzer
 cask "wireshark"
+# Lossless audio decoder
+cask "xld"
 mas "Apple Configurator", id: 1037126344
 mas "Bitwarden", id: 1352778147
+mas "Colibri", id: 1178295426
 mas "Disk Speed Test", id: 425264550
 mas "Double Shot", id: 1076145960
-mas "DuckDuckGo Privacy for Safari", id: 1482920575
-mas "GarageBand", id: 682658836
-mas "iMovie", id: 408981434
 mas "iStat Menus", id: 1319778037
 mas "Ka-Block!", id: 1335413823
 mas "Keynote", id: 409183694
@@ -163,23 +167,24 @@ mas "WhatsApp", id: 1147396723
 mas "WireGuard", id: 1451685025
 vscode "aaron-bond.better-comments"
 vscode "ahmadawais.shades-of-purple"
-vscode "albert.TabOut"
-vscode "BeardedBear.beardedicons"
+vscode "albert.tabout"
+vscode "beardedbear.beardedicons"
 vscode "bierner.emojisense"
 vscode "bierner.markdown-preview-github-styles"
-vscode "Catppuccin.catppuccin-vsc"
+vscode "catppuccin.catppuccin-vsc"
 vscode "codezombiech.gitignore"
 vscode "donjayamanne.githistory"
 vscode "eamodio.gitlens"
-vscode "GitHub.github-vscode-theme"
-vscode "GitHub.remotehub"
-vscode "GitHub.vscode-pull-request-github"
+vscode "github.github-vscode-theme"
+vscode "github.remotehub"
+vscode "github.vscode-pull-request-github"
 vscode "hashicorp.terraform"
 vscode "mhutchie.git-graph"
 vscode "miguelsolorio.fluent-icons"
 vscode "ms-azuretools.vscode-bicep"
 vscode "ms-azuretools.vscode-docker"
 vscode "ms-dotnettools.vscode-dotnet-runtime"
+vscode "ms-python.debugpy"
 vscode "ms-python.python"
 vscode "ms-python.vscode-pylance"
 vscode "ms-vscode-remote.remote-containers"
@@ -193,5 +198,4 @@ vscode "redhat.ansible"
 vscode "redhat.vscode-yaml"
 vscode "run-at-scale.terraform-doc-snippets"
 vscode "sdras.night-owl"
-vscode "TakumiI.markdowntable"
 vscode "ultram4rine.vscode-choosealicense"
