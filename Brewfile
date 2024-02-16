@@ -38,12 +38,8 @@ brew "fish"
 brew "chruby-fish"
 # Console Matrix
 brew "cmatrix"
-# Configurable talking characters in ASCII art
-brew "cowsay"
 # Top-like interface for container metrics
 brew "ctop"
-# Modern replacement for 'ls'
-brew "exa"
 # Simple, fast and user-friendly alternative to find
 brew "fd"
 # Infamous electronic fortune-cookie generator
@@ -122,7 +118,12 @@ cask "amethyst"
 cask "basictex"
 # Web browser
 cask "firefox"
+cask "font-meslo-nerd-font"
 cask "font-petit-formal-script"
+# Cross-platform Git credential storage for multiple hosting providers
+cask "git-credential-manager"
+# Cross-platform Git credential storage for multiple hosting providers
+cask "git-credential-manager"
 # Password manager app
 cask "keepassxc"
 # Explorer for Azure Storage
