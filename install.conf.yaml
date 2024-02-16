@@ -23,3 +23,12 @@
     ~/.config/bat:
       create: true
       path: bat
+
+    ~/.config/tmux:
+      create: true
+      path: tmux
+
+- shell:
+  - command: ./setup_tpm.zsh
+    stdout: true
+    stderr: true
