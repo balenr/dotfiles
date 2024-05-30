@@ -3,19 +3,18 @@ tap "epk/epk"
 tap "hashicorp/tap"
 tap "homebrew/bundle"
 tap "homebrew/cask"
-tap "homebrew/cask-fonts"
-tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "homebrew/services"
+tap "joshmedeski/sesh"
 tap "microsoft/git"
-# General-purpose data compression with high compression ratio
-brew "xz"
 # Tool for generating GNU Standards-compliant Makefiles
 brew "automake"
 # Cryptography and SSL/TLS Toolkit
 brew "openssl@3"
 # Library for command-line editing
 brew "readline"
+# General-purpose data compression with high compression ratio
+brew "xz"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.11"
 # Official Amazon AWS command-line interface
@@ -38,12 +37,14 @@ brew "fish"
 brew "chruby-fish"
 # Console Matrix
 brew "cmatrix"
+# Configurable talking characters in ASCII art
+brew "cowsay"
 # Top-like interface for container metrics
 brew "ctop"
+# Like neofetch, but much faster because written mostly in C
+brew "fastfetch"
 # Simple, fast and user-friendly alternative to find
 brew "fd"
-# Play, record, convert, and stream audio and video
-brew "ffmpeg"
 # Infamous electronic fortune-cookie generator
 brew "fortune"
 # Command-line fuzzy finder written in Go
@@ -68,8 +69,6 @@ brew "helm"
 brew "htop"
 # Configurable static site generator
 brew "hugo"
-# Tools and libraries to manipulate images in many formats
-brew "imagemagick"
 # Update of iperf: measures TCP, UDP, and SCTP bandwidth
 brew "iperf3"
 # Simple terminal UI for git commands
@@ -92,8 +91,6 @@ brew "neovim"
 brew "nmap"
 # Platform built on V8 to build network applications
 brew "node@18"
-# Cryptography and SSL/TLS Toolkit
-brew "openssl@1.1"
 # Swiss-army knife of markup format conversion
 brew "pandoc"
 # Pinentry for GPG on Mac
@@ -106,12 +103,18 @@ brew "ruby-install"
 brew "sslscan"
 # Cross-shell prompt for astronauts
 brew "starship"
+# Organize software neatly under a single directory tree (e.g. /usr/local)
+brew "stow"
 # User interface to the TELNET protocol
 brew "telnet"
 # Terminal multiplexer
 brew "tmux"
+# Display directories as trees (with optional color/HTML output)
+brew "tree"
 # Internet file retriever
 brew "wget"
+# Blazing fast terminal file manager written in Rust, based on async I/O
+brew "yazi"
 # Shell extension to navigate your filesystem faster
 brew "zoxide"
 # Git in your tmux status bar.
@@ -122,6 +125,8 @@ brew "hashicorp/tap/packer"
 brew "hashicorp/tap/terraform"
 # Vault
 brew "hashicorp/tap/vault"
+# Smart terminal session manager
+brew "joshmedeski/sesh/sesh"
 # GPU-accelerated terminal emulator
 cask "alacritty"
 # Enable Windows-like alt-tab
@@ -134,7 +139,8 @@ cask "basictex"
 cask "discord"
 # Web browser
 cask "firefox"
-cask "font-meslo-nerd-font"
+# Developer targeted fonts with a high number of glyphs
+cask "font-meslo-lg-nerd-font"
 cask "font-petit-formal-script"
 # Cross-platform Git credential storage for multiple hosting providers
 cask "git-credential-manager"
@@ -170,6 +176,8 @@ cask "vagrant-vmware-utility"
 cask "veracrypt"
 # Open-source code editor
 cask "visual-studio-code"
+# Rust-based terminal
+cask "warp"
 # GPU-accelerated cross-platform terminal emulator and multiplexer
 cask "wezterm"
 # Network protocol analyzer
@@ -183,8 +191,8 @@ mas "Colibri", id: 1178295426
 mas "Dark Reader for Safari", id: 1438243180
 mas "Disk Speed Test", id: 425264550
 mas "Double Shot", id: 1076145960
+mas "Hidden Bar", id: 1452453066
 mas "iStat Menus", id: 1319778037
-mas "Ka-Block!", id: 1335413823
 mas "Keynote", id: 409183694
 mas "LocalSend", id: 1661733229
 mas "Magnet", id: 441258766
@@ -195,6 +203,7 @@ mas "PhotoScape X", id: 929507092
 mas "Pluralsight", id: 431748264
 mas "Speedtest", id: 1153157709
 mas "The Unarchiver", id: 425424353
+mas "Usercentrics Data Shield", id: 6444618480
 mas "VCE Simulator", id: 1459356760
 mas "WhatsApp", id: 1147396723
 mas "WireGuard", id: 1451685025
@@ -228,6 +237,7 @@ vscode "ms-vscode-remote.remote-ssh-edit"
 vscode "ms-vscode.powershell"
 vscode "ms-vscode.remote-explorer"
 vscode "ms-vscode.remote-repositories"
+vscode "nur.just-black"
 vscode "redhat.ansible"
 vscode "redhat.vscode-yaml"
 vscode "shyykoserhiy.git-autoconfig"
