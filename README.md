@@ -50,14 +50,14 @@ Install Homebrew:
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-Then run the brew bundle command to install all applications in the Brewfile:
+Then run the brew bundle command to install all applications in the .Brewfile:
 
 ```shell
-cd ~/.dotfiles
-brew bundle --verbose
+brew bundle --global --verbose
 ```
 
 ## TODO
 
-- Automate installation of Homebrew, TPM and Oh-my-Zsh with Dotbot
-- Add other dotfiles to Dotbot
+- Maybe switch from oh-my-zsh to zinit
+- Switch from powerlevel10k to starship.rs for prompt
+
