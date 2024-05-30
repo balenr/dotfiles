@@ -7,6 +7,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Removed
+
+- Dotbot submodule
+- Dotbot install.sh
+- Dotbot install.conf.yaml
+- Homebrew setup_homebrew.zsh
+
+### Changed
+
+- Moved Zsh config files to root
+- Moved TMUX configuration to .config/tmux
+- Moved BAT configuration to .config/bat
+
 ## [v1.0.0] - 2023-07-18
 
 First release.
