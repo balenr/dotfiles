@@ -9,7 +9,6 @@
 # https://starship.rs
 
 palette = "catppuccin_mocha"
-
 command_timeout = 600
 
 [character]
