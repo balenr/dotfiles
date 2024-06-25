@@ -21,6 +21,7 @@ if status is-interactive
     set -gx HOMEBREW_PREFIX /usr/local
     set -gx HOMEBREW_CELLAR /usr/local/Cellar
     set -gx HOMEBREW_REPOSITORY /usr/local/Homebrew
+    set -gx HOMEBREW_NO_ENV_HINTS 1
     set -q PATH; or set PATH ''
     set -gx PATH /usr/local/sbin $PATH
     set -q MANPATH; or set MANPATH ''
@@ -30,7 +31,4 @@ if status is-interactive
 
     fish_add_path $HOME/.config/bin # custom scripts go there
 
-    #source $(brew --prefix)/opt/chruby/share/chruby/chruby.sh
-    #source $(brew --prefix)/opt/chruby/share/chruby/auto.sh
-    #chruby ruby-3.1.3
 end
