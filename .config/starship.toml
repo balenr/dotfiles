@@ -9,7 +9,7 @@
 # https://starship.rs
 
 palette = "catppuccin_mocha"
-command_timeout = 600
+command_timeout = 1600
 
 [character]
 success_symbol = "[\uf054](green)" # 

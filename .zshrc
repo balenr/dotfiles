@@ -33,4 +33,5 @@ alias bbd='brew bundle dump --global --force --describe'
 # Shell integrations
 #[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 eval "$(fzf --zsh)"
+eval "$(zoxide init --cmd cd zsh)"
 eval "$(starship init zsh)"
