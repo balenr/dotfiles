@@ -11,14 +11,29 @@ source "${ZINIT_HOME}/zinit.zsh"
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
+zinit light Aloxaf/fzf-tab
 
 # Add in snippets
 zinit snippet OMZP::git
+zinit snippet OMZP::sudo
+zinit snippet OMZP::command-not-found
 
 # Load zsh-completions
 autoload -Uz compinit && compinit
 
-# export PATH="~/.config/bin:/usr/local/sbin:$PATH"
+# History
+HISTSIZE=10000
+HISTFILE=~/.zsh_history
+SAVEHIST=$HISTSIZE
+HISTDUP=erase
+setopt appendhistory
+setopt sharehistory
+setopt hist_ignore_space
+setopt hist_ignore_all_dups
+setopt hist_save_no_dups
+setopt hist_ignore_dups
+setopt hist_find_no_dups
+
 export LANG=en_US.UTF-8
 export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES # Ansible
 #export MANPAGER="sh -c 'col -bx | bat --theme default -l man -p'"
@@ -26,9 +41,36 @@ export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES # Ansible
 export HOMEBREW_CASK_OPTS="--no-quarantine"
 export HOMEBREW_NO_ENV_HINTS=1
 
+# Aliases
+alias v='nvim'
+alias egrep='grep -E'
+alias fgrep='grep -F'
+alias grep='grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.tox}'
+
+alias ls='ls -G'
+alias la='ls -lAh'
+alias ll='ls -lh'
+
+alias md='mkdir -p'
+alias rd='rmdir'
+
+alias t='tmux'
+alias e='exit'
 
 alias cls='clear'
+alias c='clear'
+
 alias bbd='brew bundle dump --global --force --describe'
+
+# Completion styling
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
+#zstyle ':completion:*' menu select
+zstyle ':completion:*' menu no
+zstyle ':fzf-tab:complete:cd:*' fzf --preview 'ls --color=auto $realpath'
+zstyle ':fzf-tab"complete:__zoxide_z:*' fzf --preview 'ls --color=auto $realpath'
+
+export EDITOR='nvim'
 
 # Shell integrations
 #[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
