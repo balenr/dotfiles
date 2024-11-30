@@ -38,8 +38,18 @@ export LANG=en_US.UTF-8
 export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES # Ansible
 #export MANPAGER="sh -c 'col -bx | bat --theme default -l man -p'"
 
+# Homebrew
+eval "$(brew shellenv)"
+
 export HOMEBREW_CASK_OPTS="--no-quarantine"
 export HOMEBREW_NO_ENV_HINTS=1
+
+# GPG
+export GPG_TTY=$(tty)
+gpgconf --launch gpg-agent
+
+# OpenSSH
+export SSH_AUTH_SOCK="~/.ssh/agent"
 
 # Aliases
 alias v='nvim'
@@ -47,7 +57,7 @@ alias egrep='grep -E'
 alias fgrep='grep -F'
 alias grep='grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.tox}'
 
-alias ls='ls -G'
+alias ls='ls -FG'
 alias la='ls -lAh'
 alias ll='ls -lh'
 
@@ -59,6 +69,8 @@ alias e='exit'
 
 alias cls='clear'
 alias c='clear'
+
+alias cat='bat'
 
 alias bbd='brew bundle dump --global --force --describe'
 
@@ -73,7 +85,6 @@ zstyle ':fzf-tab"complete:__zoxide_z:*' fzf --preview 'ls --color=auto $realpath
 export EDITOR='nvim'
 
 # Shell integrations
-#[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 eval "$(starship init zsh)"
