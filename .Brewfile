@@ -26,7 +26,7 @@ brew "libyaml"
 # Microsoft Azure CLI 2.0
 brew "azure-cli"
 # C library of Git core methods that is re-entrant and linkable
-brew "libgit2@1.7"
+brew "libgit2"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
 # Parser generator
@@ -93,6 +93,8 @@ brew "jq"
 brew "lazygit"
 # Portable Foreign Function Interface library
 brew "libffi"
+# C library of Git core methods that is re-entrant and linkable
+brew "libgit2@1.7"
 # Rainbows and unicorns in your console!
 brew "lolcat"
 # Mac App Store command-line interface
@@ -129,6 +131,10 @@ brew "starship"
 brew "stow"
 # User interface to the TELNET protocol
 brew "telnet"
+# Tool to generate documentation from Terraform modules
+brew "terraform-docs"
+# Thin wrapper for Terraform e.g. for locking state
+brew "terragrunt"
 # Linter for Terraform files
 brew "tflint"
 # Terminal multiplexer
@@ -136,7 +142,7 @@ brew "tmux"
 # Program that allows you to count code, quickly
 brew "tokei"
 # Command-line interface to the freedesktop.org trashcan
-brew "trash-cli"
+brew "trash-cli", link: true
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
 # Internet file retriever
@@ -157,12 +163,8 @@ brew "hashicorp/tap/terraform"
 brew "hashicorp/tap/vault"
 # Smart terminal session manager
 brew "joshmedeski/sesh/sesh"
-# Simple hotkey-daemon for macOS.
-brew "koekeishiya/formulae/skhd"
 # Stylesheet Preprocessor
 brew "sass/sass/sass"
-# GPU-accelerated terminal emulator
-cask "alacritty"
 # Enable Windows-like alt-tab
 cask "alt-tab"
 # Compact TeX distribution as alternative to the full TeX Live / MacTeX
@@ -179,6 +181,8 @@ cask "firefox@developer-edition"
 cask "floorp"
 cask "font-meslo-lg-nerd-font"
 cask "font-petit-formal-script"
+# Terminal emulator that uses platform-native UI and GPU acceleration
+cask "ghostty"
 # Cross-platform Git credential storage for multiple hosting providers
 cask "git-credential-manager"
 # Cross-platform Git credential storage for multiple hosting providers
@@ -217,8 +221,6 @@ cask "time-out"
 cask "veracrypt"
 # Open-source code editor
 cask "visual-studio-code"
-# GPU-accelerated cross-platform terminal emulator and multiplexer
-cask "wezterm"
 # Network protocol analyzer
 cask "wireshark"
 # Lossless audio decoder
@@ -227,27 +229,26 @@ mas "Apple Configurator", id: 1037126344
 mas "Bitwarden", id: 1352778147
 mas "Canva", id: 897446215
 mas "Colibri", id: 1178295426
+mas "Disk Speed Test", id: 425264550
 mas "Double Shot", id: 1076145960
 mas "Fantastical", id: 975937182
 mas "Ghostery Privacy Ad Blocker", id: 6504861501
 mas "Keynote", id: 409183694
 mas "LocalSend", id: 1661733229
 mas "Microsoft Remote Desktop", id: 1295203466
-mas "Microsoft To Do", id: 1274495053
 mas "Momentum", id: 1564329434
 mas "NordVPN", id: 905953485
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Pluralsight", id: 431748264
 mas "Slack", id: 803453959
+mas "Speedtest", id: 1153157709
 mas "The Unarchiver", id: 425424353
 mas "Things", id: 904280696
 mas "Todoist", id: 585829637
-mas "VCE Simulator", id: 1459356760
-mas "Velja", id: 1607635845
+mas "WhatsApp", id: 310633997
 mas "WireGuard", id: 1451685025
 mas "Yubico Authenticator", id: 1497506650
-mas "‎WhatsApp", id: 310633997
 vscode "aaron-bond.better-comments"
 vscode "albert.tabout"
 vscode "beardedbear.beardedicons"
@@ -255,7 +256,10 @@ vscode "bierner.emojisense"
 vscode "catppuccin.catppuccin-vsc"
 vscode "codezombiech.gitignore"
 vscode "davidanson.vscode-markdownlint"
+vscode "github.copilot"
+vscode "github.copilot-chat"
 vscode "github.github-vscode-theme"
+vscode "github.remotehub"
 vscode "github.vscode-github-actions"
 vscode "github.vscode-pull-request-github"
 vscode "hashicorp.hcl"
@@ -264,11 +268,14 @@ vscode "helixquar.asciidecorator"
 vscode "johnpapa.vscode-peacock"
 vscode "lzm0x219.vscode-markdown-github"
 vscode "mhutchie.git-graph"
+vscode "ms-azuretools.vscode-azureresourcegroups"
 vscode "ms-azuretools.vscode-docker"
 vscode "ms-python.python"
 vscode "ms-vscode-remote.remote-containers"
 vscode "ms-vscode-remote.remote-ssh"
+vscode "ms-vscode.azure-repos"
 vscode "ms-vscode.powershell"
+vscode "ms-vscode.remote-repositories"
 vscode "redhat.ansible"
 vscode "redhat.vscode-yaml"
 vscode "shyykoserhiy.git-autoconfig"
