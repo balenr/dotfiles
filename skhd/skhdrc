@@ -1,0 +1,56 @@
+# focus window
+alt - h : yabai -m window --focus west
+alt - j : yabai -m window --focus south
+alt - k : yabai -m window --focus north
+alt - l : yabai -m window --focus east
+
+# swap managed window
+shift + alt - h : yabai -m window --swap west
+shift + alt - j : yabai -m window --swap south
+shift + alt - k : yabai -m window --swap north
+shift + alt - l : yabai -m window --swap east
+
+# move managed window
+shift + alt + ctrl - h : yabai -m window --warp west
+shift + alt + ctrl - j : yabai -m window --warp south
+shift + alt + ctrl - k : yabai -m window --warp north
+shift + alt + ctrl - l : yabai -m window --warp east
+
+# rotate tree
+alt - r : yabai -m space --rotate 90
+
+# toggle window fullscreen zoom
+alt - f : yabai -m window --toggle zoom-fullscreen
+
+# alt - s : yabai -m window --toggle
+# alt - s : yabai -m window --toggle sticky; \
+#           yabai -m window --toggle topmost; \
+#           yabai -m window --toggle pip
+
+# toggle padding and gap
+alt - g : yabai -m space --toggle padding; yabai -m space --toggle gap
+
+# toggle window float
+alt - t : yabai -m window --toggle float --grid 4:4:1:1:2:2
+
+# balance size of windows
+shift + alt - 0 : yabai -m space --balance
+
+# move window and focus desktop
+shift + alt - 1 : yabai -m window --space 1 --focus
+shift + alt - 2 : yabai -m window --space 2 --focus
+shift + alt - 3 : yabai -m window --space 3 --focus
+shift + alt - 4 : yabai -m window --space 4 --focus
+shift + alt - 5 : yabai -m window --space 5 --focus
+shift + alt - 6 : yabai -m window --space 6 --focus
+shift + alt - 7 : yabai -m window --space 7 --focus
+
+# open terminal, blazingly fast compared to iTerm/Hyper
+# cmd - return : /Applications/Alacritty.app/Contents/MacOS/alacritty
+cmd - return : /Applications/WezTerm.app/Contents/MacOS/wezterm
+
+# open brave browser
+shift + cmd - return : /Applications/Brave Browser.app/Contents/MacOS/Brave Browser
+
+# restart yabai
+ctrl + alt - r : yabai --restart-service
