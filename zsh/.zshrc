@@ -36,7 +36,7 @@ setopt hist_find_no_dups
 
 export LANG=en_US.UTF-8
 export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES # Ansible
-#export MANPAGER="sh -c 'col -bx | bat --theme default -l man -p'"
+export MANPAGER="sh -c 'col -bx | bat --plain --language man'"
 
 ## Homebrew
 eval "$(brew shellenv)"
