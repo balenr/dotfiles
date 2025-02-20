@@ -161,8 +161,6 @@ brew "hashicorp/tap/packer"
 brew "hashicorp/tap/terraform"
 # Vault
 brew "hashicorp/tap/vault"
-# Smart terminal session manager
-brew "joshmedeski/sesh/sesh"
 # Stylesheet Preprocessor
 brew "sass/sass/sass"
 # Enable Windows-like alt-tab
@@ -225,30 +223,6 @@ cask "visual-studio-code"
 cask "wireshark"
 # Lossless audio decoder
 cask "xld"
-mas "Apple Configurator", id: 1037126344
-mas "Bitwarden", id: 1352778147
-mas "Canva", id: 897446215
-mas "Colibri", id: 1178295426
-mas "Disk Speed Test", id: 425264550
-mas "Double Shot", id: 1076145960
-mas "Fantastical", id: 975937182
-mas "Ghostery Privacy Ad Blocker", id: 6504861501
-mas "Keynote", id: 409183694
-mas "LocalSend", id: 1661733229
-mas "Microsoft Remote Desktop", id: 1295203466
-mas "Momentum", id: 1564329434
-mas "NordVPN", id: 905953485
-mas "Numbers", id: 409203825
-mas "Pages", id: 409201541
-mas "Pluralsight", id: 431748264
-mas "Slack", id: 803453959
-mas "Speedtest", id: 1153157709
-mas "The Unarchiver", id: 425424353
-mas "Things", id: 904280696
-mas "Todoist", id: 585829637
-mas "WhatsApp", id: 310633997
-mas "WireGuard", id: 1451685025
-mas "Yubico Authenticator", id: 1497506650
 vscode "aaron-bond.better-comments"
 vscode "albert.tabout"
 vscode "beardedbear.beardedicons"

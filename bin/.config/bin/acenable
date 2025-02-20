@@ -1,0 +1,22 @@
+#!/usr/bin/env sh
+
+gum style --foreground 12 --border-foreground 12 --border double --align center --width 50 --margin "1 0" --padding "1 2" "Any Connect Enable"
+
+# Make sure only root can run this script
+if [[ "$(id -u)" != "0" ]]; then
+	gum style --foreground 1 "| This script must be run as root!" #echo "This script must be run as root" 1>&2
+	exit 1
+fi
+
+echo Enabling vpnagentd...
+launchctl enable system/com.cisco.anyconnect.vpnagentd
+
+echo Bootstrapping vpnagentd...
+launchctl bootstrap system /Library/LaunchDaemons/com.cisco.anyconnect.vpnagentd.plist
+
+# TODO: Check if the following is still needed:
+# Prevent Cisco AnyConnect Secure Mobility Client from starting on startup
+#launchctl load -w /Library/LaunchAgents/com.cisco.anyconnect.gui.plist
+
+# Prevent Cisco Notifications regarding the socket filter from occurring on startup
+#launchctl load -w /Library/LaunchAgents/com.cisco.anyconnect.notification.plist
