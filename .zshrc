@@ -7,21 +7,21 @@ fi
 
 source "${ZINIT_HOME}/zinit.zsh"
 
-# Add in zsh plugins
+## Add in zsh plugins
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
 zinit light Aloxaf/fzf-tab
 
-# Add in snippets
-zinit snippet OMZP::git
+## Add in snippets
+# zinit snippet OMZP::git
 zinit snippet OMZP::sudo
 zinit snippet OMZP::command-not-found
 
-# Load zsh-completions
+## Load zsh-completions
 autoload -Uz compinit && compinit
 
-# History
+## History
 HISTSIZE=10000
 HISTFILE=~/.zsh_history
 SAVEHIST=$HISTSIZE
@@ -38,20 +38,20 @@ export LANG=en_US.UTF-8
 export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES # Ansible
 #export MANPAGER="sh -c 'col -bx | bat --theme default -l man -p'"
 
-# Homebrew
+## Homebrew
 eval "$(brew shellenv)"
 
 export HOMEBREW_CASK_OPTS="--no-quarantine"
 export HOMEBREW_NO_ENV_HINTS=1
 
-# GPG
+## GPG
 export GPG_TTY=$(tty)
 gpgconf --launch gpg-agent
 
-# OpenSSH
+## OpenSSH
 export SSH_AUTH_SOCK="~/.ssh/agent"
 
-# Aliases
+## Aliases
 alias v='nvim'
 alias egrep='grep -E'
 alias fgrep='grep -F'
@@ -72,9 +72,9 @@ alias c='clear'
 
 alias cat='bat'
 
-alias bbd='brew bundle dump --global --force --describe'
+alias bbd='brew bundle dump --force --describe'
 
-# Completion styling
+## Completion styling
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 #zstyle ':completion:*' menu select
@@ -84,7 +84,17 @@ zstyle ':fzf-tab"complete:__zoxide_z:*' fzf --preview 'ls --color=auto $realpath
 
 export EDITOR='nvim'
 
-# Shell integrations
+## Shell integrations
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 eval "$(starship init zsh)"
+
+function y() {
+  local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+  yazi "$@" --cwd-file="$tmp"
+  if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+    builtin cd -- "$cwd"
+  fi
+  rm -f -- "$tmp"
+}
+
