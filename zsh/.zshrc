@@ -52,7 +52,6 @@ gpgconf --launch gpg-agent
 export SSH_AUTH_SOCK="~/.ssh/agent"
 
 ## Aliases
-alias v='nvim'
 alias egrep='grep -E'
 alias fgrep='grep -F'
 alias grep='grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.tox}'
@@ -61,14 +60,16 @@ alias ls='ls -FG'
 alias la='ls -lAh'
 alias ll='ls -lh'
 
+alias l='eza --long --icons --git'
+
 alias md='mkdir -p'
 alias rd='rmdir'
 
+alias v='nvim'
 alias t='tmux'
 alias e='exit'
-
-alias cls='clear'
 alias c='clear'
+alias cls='clear'
 
 alias cat='bat'
 
