@@ -3,7 +3,7 @@
 TERM = "xterm-256color"
 
 [font]
-size = 16.0
+size = 18.0
 
 [font.normal]
 family = "Hack Nerd Font Mono"
@@ -30,8 +30,8 @@ style = "Regular"
 
 [window]
 decorations = "Transparent" # Options are: Full, Transparent, Buttonless or None
-dynamic_padding = false # True or False, default is false
-opacity = 0.9
+dynamic_padding = false     # True or False, default is false
+opacity = 0.75
 option_as_alt = "Both"
 
 [window.padding]
@@ -42,7 +42,6 @@ y = 26
 
 live_config_reload = true
 import = [
-  "/Users/rene/.config/alacritty/themes/catppuccin-mocha.toml"
+  "/Users/rene/.config/alacritty/themes/catppuccin-mocha.toml",
   #"/Users//rene/.config/alacritty/themes/gruvbox_dark.toml"
 ]
-
