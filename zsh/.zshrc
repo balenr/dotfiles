@@ -24,8 +24,8 @@ autoload -Uz compinit && compinit
 zinit cdreplay  -q
 
 ## Basic Zsh options
-setopt autocd    # change directory just by typing its name
-setopt correct   # auto correct mistakes
+# setopt autocd    # change directory just by typing its name
+# setopt correct   # auto correct mistakes
 
 ## History configuration
 HISTSIZE=10000
@@ -81,15 +81,17 @@ alias egrep='grep -E'
 alias fgrep='grep -F'
 alias grep='grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.tox}'
 alias ls='ls -FG'
-alias la='ls -lAh'
 alias ll='ls -lh'
+# alias la='ls -lAh'
 alias l='eza --long --icons --git'
+alias la='eza --long --all --icons --git'
 alias md='mkdir -p'
 alias rd='rmdir'
 alias v='nvim'
 alias t='tmux'
 alias e='exit'
 alias c='clear'
+alias ck='nvim ~/.config/kitty/kitty.conf'
 alias cls='clear'
 alias cat='bat'
 alias lg='lazygit'
