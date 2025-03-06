@@ -1,7 +1,17 @@
-theme = catppuccin-mocha
-background-opacity = 0.75
+# Fonts
 font-family = "Hack Nerd Font Mono"
 font-size = 18.0
-background-blur-radius = 20
+
+# Theme
+theme = catppuccin-mocha
+background-opacity = 0.9
+#background-blur-radius = 20
+
+# Window
 window-decoration = true
+
+# Mouse
 mouse-hide-while-typing = true
+
+# Other
+copy-on-select = clipboard
