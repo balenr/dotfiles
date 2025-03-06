@@ -14,7 +14,6 @@ zinit light zsh-users/zsh-autosuggestions
 zinit light Aloxaf/fzf-tab
 
 ## Add in snippets
-zinit snippet OMZP::git
 zinit snippet OMZP::sudo
 zinit snippet OMZP::command-not-found
 
@@ -22,10 +21,6 @@ zinit snippet OMZP::command-not-found
 autoload -Uz compinit && compinit
 
 zinit cdreplay  -q
-
-## Basic Zsh options
-# setopt autocd    # change directory just by typing its name
-# setopt correct   # auto correct mistakes
 
 ## History configuration
 HISTSIZE=10000
@@ -56,6 +51,7 @@ export FZF_DEFAULT_OPTS="\
   --preview-window=hidden \
   --bind='space:toggle-preview' \
   --layout=reverse \
+  --height=50% \
   --no-info \
   --no-separator \
   --color='16,bg+:-1,gutter:-1,prompt:5,pointer:5,marker:6,border:4,label:4,header:italic' \
@@ -81,8 +77,7 @@ alias egrep='grep -E'
 alias fgrep='grep -F'
 alias grep='grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.tox}'
 alias ls='ls -FG'
-alias ll='ls -lh'
-# alias la='ls -lAh'
+alias ll='ls -lAh'
 alias l='eza --long --icons --git'
 alias la='eza --long --all --icons --git'
 alias md='mkdir -p'
