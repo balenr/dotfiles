@@ -7,7 +7,6 @@ tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/core"
 tap "homebrew/services"
-tap "joshmedeski/sesh"
 tap "koekeishiya/formulae"
 tap "microsoft/git"
 tap "sass/sass"
@@ -101,6 +100,8 @@ brew "lolcat"
 brew "mas"
 # Remote terminal application
 brew "mosh"
+# Fast, highly customisable system info script
+brew "neofetch"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
 # Port scanning utility for large networks
@@ -163,6 +164,8 @@ brew "hashicorp/tap/terraform"
 brew "hashicorp/tap/vault"
 # Stylesheet Preprocessor
 brew "sass/sass/sass"
+# GPU-accelerated terminal emulator
+cask "alacritty"
 # Enable Windows-like alt-tab
 cask "alt-tab"
 # Compact TeX distribution as alternative to the full TeX Live / MacTeX
@@ -191,6 +194,10 @@ cask "karabiner-elements"
 cask "keepassxc"
 # Open-source keystroke visualiser
 cask "keycastr"
+# GPU-based terminal emulator
+cask "kitty"
+# Web browser
+cask "librewolf"
 # File system integration
 cask "macfuse"
 # Tool to control external monitor brightness & volume
@@ -199,8 +206,6 @@ cask "monitorcontrol"
 cask "notunes"
 # Open-source software for live streaming and screen recording
 cask "obs"
-# Knowledge base that works on top of a local folder of plain text Markdown files
-cask "obsidian"
 # Client program for the OpenVPN Access Server
 cask "openvpn-connect"
 # Command-line shell and scripting language
@@ -223,6 +228,30 @@ cask "visual-studio-code"
 cask "wireshark"
 # Lossless audio decoder
 cask "xld"
+mas "Apple Configurator", id: 1037126344
+mas "Bitwarden", id: 1352778147
+mas "Canva", id: 897446215
+mas "Colibri", id: 1178295426
+mas "Disk Speed Test", id: 425264550
+mas "Double Shot", id: 1076145960
+mas "Fantastical", id: 975937182
+mas "Ghostery Privacy Ad Blocker", id: 6504861501
+mas "Keynote", id: 409183694
+mas "LocalSend", id: 1661733229
+mas "Momentum", id: 1564329434
+mas "NordVPN", id: 905953485
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
+mas "Pluralsight", id: 431748264
+mas "Slack", id: 803453959
+mas "Speedtest", id: 1153157709
+mas "The Unarchiver", id: 425424353
+mas "Things", id: 904280696
+mas "Todoist", id: 585829637
+mas "WhatsApp", id: 310633997
+mas "Windows App", id: 1295203466
+mas "WireGuard", id: 1451685025
+mas "Yubico Authenticator", id: 1497506650
 vscode "aaron-bond.better-comments"
 vscode "albert.tabout"
 vscode "beardedbear.beardedicons"
@@ -230,6 +259,7 @@ vscode "bierner.emojisense"
 vscode "catppuccin.catppuccin-vsc"
 vscode "codezombiech.gitignore"
 vscode "davidanson.vscode-markdownlint"
+vscode "eamodio.gitlens"
 vscode "github.copilot"
 vscode "github.copilot-chat"
 vscode "github.github-vscode-theme"
