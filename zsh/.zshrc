@@ -76,13 +76,15 @@ alias ..='cd ..'
 alias egrep='grep -E'
 alias fgrep='grep -F'
 alias grep='grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.tox}'
-alias ls='ls -FG'
-alias ll='ls -lAh'
+alias ls='eza -F --grid --width=80'
 alias l='eza --long --icons --git'
 alias la='eza --long --all --icons --git'
 alias md='mkdir -p'
 alias rd='rmdir'
 alias v='nvim'
+alias vi='nvim'
+alias vim='nvim'
+alias rvim='NVIM_APPNAME=rvim nvim'
 alias t='tmux'
 alias e='exit'
 alias c='clear'
@@ -105,5 +107,7 @@ source ~/.config/zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh
 ## Shell integrations
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
+
+export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
 eval "$(starship init zsh)"
 
