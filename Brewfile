@@ -12,6 +12,8 @@ tap "microsoft/git"
 tap "sass/sass"
 # General-purpose data compression with high compression ratio
 brew "xz"
+# Code searching, linting, rewriting
+brew "ast-grep"
 # Tool for generating GNU Standards-compliant Makefiles
 brew "automake"
 # Cryptography and SSL/TLS Toolkit
@@ -44,10 +46,12 @@ brew "fish"
 brew "chruby-fish"
 # Console Matrix
 brew "cmatrix"
+# Apjanke's fork of the classic cowsay project
+brew "cowsay"
 # Top-like interface for container metrics
 brew "ctop"
 # Message bus system, providing inter-application communication
-brew "dbus"
+brew "dbus", restart_service: :changed
 # Modern, maintained replacement for ls
 brew "eza"
 # Simple, fast and user-friendly alternative to find
@@ -96,14 +100,18 @@ brew "libffi"
 brew "libgit2@1.7"
 # Rainbows and unicorns in your console!
 brew "lolcat"
+# Package manager for the Lua programming language
+brew "luarocks"
+# System information fetcher, with an emphasis on performance and minimalism
+brew "macchina"
 # Mac App Store command-line interface
 brew "mas"
 # Remote terminal application
 brew "mosh"
-# Fast, highly customisable system info script
-brew "neofetch"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
+# POSIX *nix fetch script using Nerdfonts
+brew "nerdfetch"
 # Port scanning utility for large networks
 brew "nmap"
 # Platform built on V8 to build network applications
@@ -164,8 +172,6 @@ brew "hashicorp/tap/terraform"
 brew "hashicorp/tap/vault"
 # Stylesheet Preprocessor
 brew "sass/sass/sass"
-# GPU-accelerated terminal emulator
-cask "alacritty"
 # Enable Windows-like alt-tab
 cask "alt-tab"
 # Compact TeX distribution as alternative to the full TeX Live / MacTeX
@@ -176,10 +182,6 @@ cask "brave-browser"
 cask "discord"
 # Web browser
 cask "firefox"
-# Web browser
-cask "firefox@developer-edition"
-# Privacy-focused Firefox-based browser
-cask "floorp"
 cask "font-meslo-lg-nerd-font"
 cask "font-petit-formal-script"
 # Terminal emulator that uses platform-native UI and GPU acceleration
@@ -208,6 +210,8 @@ cask "notunes"
 cask "obs"
 # Client program for the OpenVPN Access Server
 cask "openvpn-connect"
+# WebKit based web browser
+cask "orion"
 # Command-line shell and scripting language
 cask "powershell"
 # Control your tools with a few keystrokes
@@ -218,8 +222,8 @@ cask "rectangle"
 cask "signal"
 # Mesh VPN based on WireGuard
 cask "tailscale"
-# Customizable timing of breaks
-cask "time-out"
+# Customizable email client
+cask "thunderbird"
 # Disk encryption software focusing on security based on TrueCrypt
 cask "veracrypt"
 # Open-source code editor
@@ -230,15 +234,18 @@ cask "wireshark"
 cask "xld"
 mas "Apple Configurator", id: 1037126344
 mas "Bitwarden", id: 1352778147
-mas "Canva", id: 897446215
+mas "Blackmagic Disk Speed Test", id: 425264550
 mas "Colibri", id: 1178295426
-mas "Disk Speed Test", id: 425264550
 mas "Double Shot", id: 1076145960
 mas "Fantastical", id: 975937182
 mas "Ghostery Privacy Ad Blocker", id: 6504861501
 mas "Keynote", id: 409183694
 mas "LocalSend", id: 1661733229
-mas "Momentum", id: 1564329434
+mas "Microsoft Excel", id: 462058435
+mas "Microsoft OneNote", id: 784801555
+mas "Microsoft Outlook", id: 985367838
+mas "Microsoft PowerPoint", id: 462062816
+mas "Microsoft Word", id: 462054704
 mas "NordVPN", id: 905953485
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
@@ -247,7 +254,6 @@ mas "Slack", id: 803453959
 mas "Speedtest", id: 1153157709
 mas "The Unarchiver", id: 425424353
 mas "Things", id: 904280696
-mas "Todoist", id: 585829637
 mas "WhatsApp", id: 310633997
 mas "Windows App", id: 1295203466
 mas "WireGuard", id: 1451685025
@@ -259,13 +265,18 @@ vscode "bierner.emojisense"
 vscode "catppuccin.catppuccin-vsc"
 vscode "codezombiech.gitignore"
 vscode "davidanson.vscode-markdownlint"
+vscode "docker.docker"
+vscode "donjayamanne.githistory"
 vscode "eamodio.gitlens"
+vscode "editorconfig.editorconfig"
+vscode "enkia.tokyo-night"
 vscode "github.copilot"
 vscode "github.copilot-chat"
 vscode "github.github-vscode-theme"
 vscode "github.remotehub"
 vscode "github.vscode-github-actions"
 vscode "github.vscode-pull-request-github"
+vscode "gruntfuggly.todo-tree"
 vscode "hashicorp.hcl"
 vscode "hashicorp.terraform"
 vscode "helixquar.asciidecorator"
@@ -274,12 +285,17 @@ vscode "lzm0x219.vscode-markdown-github"
 vscode "mhutchie.git-graph"
 vscode "ms-azuretools.vscode-azureresourcegroups"
 vscode "ms-azuretools.vscode-docker"
+vscode "ms-python.debugpy"
 vscode "ms-python.python"
+vscode "ms-python.vscode-pylance"
 vscode "ms-vscode-remote.remote-containers"
 vscode "ms-vscode-remote.remote-ssh"
+vscode "ms-vscode-remote.remote-ssh-edit"
 vscode "ms-vscode.azure-repos"
 vscode "ms-vscode.powershell"
+vscode "ms-vscode.remote-explorer"
 vscode "ms-vscode.remote-repositories"
+vscode "naumovs.color-highlight"
 vscode "redhat.ansible"
 vscode "redhat.vscode-yaml"
 vscode "shyykoserhiy.git-autoconfig"
@@ -289,4 +305,5 @@ vscode "takumii.markdowntable"
 vscode "timdenholm.netscaler"
 vscode "ultram4rine.vscode-choosealicense"
 vscode "usernamehw.errorlens"
+vscode "vscodevim.vim"
 vscode "yahyabatulu.vscode-markdown-alert"
