@@ -7,18 +7,28 @@ fi
 
 source "${ZINIT_HOME}/zinit.zsh"
 
-## Add in zsh plugins
-zinit light zsh-users/zsh-syntax-highlighting
-zinit light zsh-users/zsh-completions
-zinit light zsh-users/zsh-autosuggestions
-zinit light Aloxaf/fzf-tab
+## Asynchronous plugin loading
+zinit for \
+    light-mode \
+  zsh-users/zsh-syntax-highlighting \
+    light-mode \
+  zsh-users/zsh-completions \
+    light-mode \
+  zsh-users/zsh-autosuggestions \
+    light-mode \
+  Aloxaf/fzf-tab
 
 ## Add in snippets
 zinit snippet OMZP::sudo
 zinit snippet OMZP::command-not-found
 
 ## Load zsh-completions
-autoload -Uz compinit && compinit
+autoload -Uz compinit
+if [[ -n "$ZSH_COMPDUMP" ]]; then
+  compinit -d "$ZSH_COMPDUMP"
+else
+  compinit
+fi
 
 zinit cdreplay  -q
 
@@ -27,22 +37,13 @@ HISTSIZE=10000
 HISTFILE=~/.zsh_history
 SAVEHIST=$HISTSIZE
 HISTDUP=erase
-setopt appendhistory
-setopt sharehistory
-setopt hist_ignore_space
-setopt hist_ignore_all_dups
-setopt hist_save_no_dups
-setopt hist_ignore_dups
-setopt hist_find_no_dups
+setopt appendhistory sharehistory hist_ignore_space hist_ignore_all_dups hist_save_no_dups hist_ignore_dups hist_find_no_dups
 
-export LANG=en_US.UTF-8
-export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES # Ansible
 export MANPAGER="sh -c 'col -bx | bat --plain --language man'"
 export PAGER='bat'
 export EDITOR='nvim'
 
-## FZF
-#export FZF_DEFAULT_COMMAND="fd --type f -H -E '.git'"
+## FZF Optimizations
 export FZF_DEFAULT_OPTS="\
   --ansi \
   --border=rounded \
@@ -56,38 +57,58 @@ export FZF_DEFAULT_OPTS="\
   --no-separator \
   --color='16,bg+:-1,gutter:-1,prompt:5,pointer:5,marker:6,border:4,label:4,header:italic' \
   "
-
 export FZF_CTRL_R_OPTS="--border-label=' history ' --prompt='  '"
 
-## Homebrew
-eval "$(brew shellenv)"
-export HOMEBREW_CASK_OPTS="--no-quarantine"
-export HOMEBREW_NO_ENV_HINTS=1
+## Custom functions
+function exists () {
+    command -v $1 >/dev/null 2>&1
+}
 
-## GPG
-export GPG_TTY=$(tty)
-gpgconf --launch gpg-agent
+function y() {
+  local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+  yazi "$@" --cwd-file="$tmp"
+  if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+    builtin cd -- "$cwd"
+  fi
+  rm -f -- "$tmp"
+}
 
-## OpenSSH
-export SSH_AUTH_SOCK="~/.ssh/agent"
+function nvims() {
+  items=("default")
+  config=$(printf "%s\n" "${items[@]}" | fzf --prompt="Neovim Config > " --exit-0)
+  if [[ -z $config ]]; then
+    echo "Nothing selected"
+    return 0
+  elif [[ $config == "default" ]]; then
+    config=""
+  fi
+  NVIM_APPNAME=$config nvim $@
+}
 
 ## Aliases
 alias ..='cd ..'
 alias egrep='grep -E'
 alias fgrep='grep -F'
 alias grep='grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.tox}'
-alias ls='eza -F --grid --width=80'
+alias ls='eza -F --grid --width=100 --icons'
 alias l='eza --long --icons --git'
+alias ll='eza --long --icons --git'
 alias la='eza --long --all --icons --git'
 alias md='mkdir -p'
 alias rd='rmdir'
+
+# System
+alias shutdown='sudo shutdown now'
+alias reboot='sudo reboot'
+alias sleep='pmset sleepnow'
+alias c='clear'
+alias e='exit'
+
+# nvim
 alias v='nvim'
 alias vi='nvim'
 alias vim='nvim'
-alias rvim='NVIM_APPNAME=rvim nvim'
 alias t='tmux'
-alias e='exit'
-alias c='clear'
 alias ck='nvim ~/.config/kitty/kitty.conf'
 alias cls='clear'
 alias cat='bat'
@@ -102,12 +123,12 @@ zstyle ':fzf-tab:complete:cd:*' fzf --preview 'ls --color=auto $realpath'
 zstyle ':fzf-tab"complete:__zoxide_z:*' fzf --preview 'ls --color=auto $realpath'
 
 ## Zsh syntax highlighting
-source ~/.config/zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh
+source $HOME/.config/zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh
 
 ## Shell integrations
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 
+## Starship prompt
 export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
 eval "$(starship init zsh)"
-

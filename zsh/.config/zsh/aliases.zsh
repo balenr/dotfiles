@@ -1,0 +1,31 @@
+## Aliases
+alias ..='cd ..'
+alias egrep='grep -E'
+alias fgrep='grep -F'
+alias grep='grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.tox}'
+alias ls='eza -F --grid --width=100 --icons'
+alias l='eza --long --icons --git'
+alias ll='eza --long --icons --git'
+alias la='eza --long --all --icons --git'
+alias md='mkdir -p'
+alias rd='rmdir'
+
+# System
+alias shutdown='sudo shutdown now'
+alias reboot='sudo reboot'
+alias sleep='pmset sleepnow'
+alias c='clear'
+alias e='exit'
+
+# nvim
+alias v='nvim'
+alias vi='nvim'
+alias vim='nvim'
+alias rvim='NVIM_APPNAME=rvim nvim'
+alias udemy='NVIM_APPNAME=nvim-udemy nvim'
+alias t='tmux'
+alias ck='nvim ~/.config/kitty/kitty.conf'
+alias cls='clear'
+alias cat='bat'
+alias lg='lazygit'
+alias bbd='brew bundle dump --force --describe'
