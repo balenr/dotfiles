@@ -3,7 +3,8 @@ font-family = "Hack Nerd Font Mono"
 font-size = 18.0
 
 # Theme
-theme = catppuccin-mocha
+#theme = catppuccin-mocha
+theme = tokyonight
 background-opacity = 0.9
 #background-blur-radius = 20
 
@@ -15,3 +16,8 @@ mouse-hide-while-typing = true
 
 # Other
 copy-on-select = clipboard
+macos-option-as-alt = left
+
+# Key mappings
+keybind = ctrl+`=toggle_quick_terminal
+
