@@ -1,15 +1,1 @@
-# Set PowerShell to UTF-8
-[console]::InputEncoding = [console]::OutputEncoding = New-Object System.Text.UTF8Encoding
-
-Import-Module -Name Terminal-icons
-
-function Edit-Profile {
-    nvim $PROFILE.CurrentUserAllHosts
-}
-
-# PSReadLine
-Set-PSReadLineOption -PredictionSource HistoryAndPlugin
-Set-PSReadLineOption -PredictionViewStyle ListView
-
-# Set Prompt
-Invoke-Expression (&starship init powershell)
+oh-my-posh init pwsh --config https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/cobalt2.omp.json | iex
