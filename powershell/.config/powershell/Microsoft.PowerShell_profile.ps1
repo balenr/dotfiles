@@ -24,11 +24,27 @@ $PSReadLineOptions = @{
         Keyword = '#8367c7'  # Violet (pastel)
         Error = '#FF6347'  # Tomato (keeping it close to red for visibility)
     }
-    PredictionSource = 'HistoryAndPlugin'
+    PredictionSource = 'History'
     PredictionViewStyle = 'ListView'
     BellStyle = 'None'
 }
 Set-PSReadLineOption @PSReadLineOptions
+
+# Custom key handlers
+Set-PSReadLineKeyHandler -Key UpArrow -Function HistorySearchBackward
+Set-PSReadLineKeyHandler -Key DownArrow -Function HistorySearchForward
+Set-PSReadLineKeyHandler -Key Tab -Function MenuComplete
+Set-PSReadLineKeyHandler -Chord 'Ctrl+d' -Function DeleteChar
+Set-PSReadLineKeyHandler -Chord 'Ctrl+w' -Function BackwardDeleteWord
+Set-PSReadLineKeyHandler -Chord 'Alt+d' -Function DeleteWord
+Set-PSReadLineKeyHandler -Chord 'Ctrl+LeftArrow' -Function BackwardWord
+Set-PSReadLineKeyHandler -Chord 'Ctrl+RightArrow' -Function ForwardWord
+Set-PSReadLineKeyHandler -Chord 'Ctrl+z' -Function Undo
+Set-PSReadLineKeyHandler -Chord 'Ctrl+y' -Function Redo
+
+# Improved prediction settings
+Set-PSReadLineOption -PredictionSource HistoryAndPlugin
+Set-PSReadLineOption -MaximumHistoryCount 10000
 
 # Set Prompt
 # Invoke-Expression (&starship init powershell)
