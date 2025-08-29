@@ -74,7 +74,7 @@ function y() {
 }
 
 function nvims() {
-  items=("default")
+  items=("default", "nvim-from-scratch", "nvim-kickstart")
   config=$(printf "%s\n" "${items[@]}" | fzf --prompt="Neovim Config > " --exit-0)
   if [[ -z $config ]]; then
     echo "Nothing selected"
