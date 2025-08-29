@@ -33,7 +33,7 @@ fi
 zinit cdreplay  -q
 
 ## History configuration
-HISTSIZE=10000
+HISTSIZE=100000
 HISTFILE=~/.zsh_history
 SAVEHIST=$HISTSIZE
 HISTDUP=erase
