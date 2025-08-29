@@ -1,1 +1,1 @@
-Write-Host "Welcome to VSCODE PowerShell"
+Write-Host "Welcome to VSCode PowerShell"

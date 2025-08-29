@@ -1,6 +1,11 @@
-# Set PowerShell to UTF-8
-[console]::InputEncoding = [console]::OutputEncoding = New-Object System.Text.UTF8Encoding
+Write-Host "Loading settings from $PSCommandPath"
 
+# Set PowerShell to UTF-8
+$OutputEncoding = [console]::InputEncoding = [console]::OutputEncoding = New-Object System.Text.UTF8Encoding
+
+if (-not (Get-Module -ListAvailable -Name Terminal-Icons)) {
+    Install-Module -Name Terminal-Icons -Scope CurrentUser -Force -SkipPublisherCheck
+}
 Import-Module -Name Terminal-icons
 
 function Edit-Profile {
@@ -56,6 +61,6 @@ if (Test-Path -Path $profile.CurrentUserAllHosts -PathType Leaf) {
         return
     } else {
         oh-my-posh init pwsh | Invoke-Expression
+
     }
   }
-
