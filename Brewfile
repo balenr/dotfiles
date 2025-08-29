@@ -10,20 +10,28 @@ tap "homebrew/services"
 tap "koekeishiya/formulae"
 tap "microsoft/git"
 tap "sass/sass"
+# Static analysis and lint tool, for (ba)sh scripts
+brew "shellcheck"
+# Static checker for GitHub Actions workflow files
+brew "actionlint"
+# Cryptography and SSL/TLS Toolkit
+brew "openssl@3"
+# YAML Parser
+brew "libyaml"
+# Library for command-line editing
+brew "readline"
 # General-purpose data compression with high compression ratio
 brew "xz"
+# Automate deployment, configuration, and upgrading
+brew "ansible"
+# Checks ansible playbooks for practices and behaviour
+brew "ansible-lint"
 # Code searching, linting, rewriting
 brew "ast-grep"
 # Tool for generating GNU Standards-compliant Makefiles
 brew "automake"
-# Cryptography and SSL/TLS Toolkit
-brew "openssl@3"
-# Library for command-line editing
-brew "readline"
 # Official Amazon AWS command-line interface
 brew "awscli"
-# YAML Parser
-brew "libyaml"
 # Microsoft Azure CLI 2.0
 brew "azure-cli"
 # C library of Git core methods that is re-entrant and linkable
@@ -132,6 +140,8 @@ brew "python@3.11"
 brew "ripgrep"
 # Install Ruby, JRuby, Rubinius, TruffleRuby, or mruby
 brew "ruby-install"
+# Autoformat shell script source code
+brew "shfmt"
 # Test SSL/TLS enabled services to discover supported cipher suites
 brew "sslscan"
 # Cross-shell prompt for astronauts
@@ -154,6 +164,8 @@ brew "tokei"
 brew "trash-cli", link: true
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
+# Extremely fast Python package installer and resolver, written in Rust
+brew "uv"
 # Internet file retriever
 brew "wget"
 # Blazing fast terminal file manager written in Rust, based on async I/O
@@ -178,8 +190,6 @@ cask "alt-tab"
 cask "basictex"
 # Web browser focusing on privacy
 cask "brave-browser"
-# Voice and text chat software
-cask "discord"
 # Web browser
 cask "firefox"
 cask "font-meslo-lg-nerd-font"
@@ -198,14 +208,10 @@ cask "keepassxc"
 cask "keycastr"
 # GPU-based terminal emulator
 cask "kitty"
-# Web browser
-cask "librewolf"
 # File system integration
 cask "macfuse"
 # Tool to control external monitor brightness & volume
 cask "monitorcontrol"
-# Simple application that will prevent iTunes or Apple Music from launching
-cask "notunes"
 # Open-source software for live streaming and screen recording
 cask "obs"
 # Client program for the OpenVPN Access Server
@@ -221,15 +227,17 @@ cask "rectangle"
 # Instant messaging application focusing on security
 cask "signal"
 # Mesh VPN based on WireGuard
-cask "tailscale"
+cask "tailscale-app"
 # Customizable email client
 cask "thunderbird"
 # Disk encryption software focusing on security based on TrueCrypt
 cask "veracrypt"
 # Open-source code editor
 cask "visual-studio-code"
+# GPU-accelerated cross-platform terminal emulator and multiplexer
+cask "wezterm"
 # Network protocol analyzer
-cask "wireshark"
+cask "wireshark-app"
 # Lossless audio decoder
 cask "xld"
 mas "Apple Configurator", id: 1037126344
@@ -249,8 +257,6 @@ mas "Microsoft Word", id: 462054704
 mas "NordVPN", id: 905953485
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
-mas "Pluralsight", id: 431748264
-mas "Slack", id: 803453959
 mas "Speedtest", id: 1153157709
 mas "The Unarchiver", id: 425424353
 mas "Things", id: 904280696
@@ -261,15 +267,14 @@ mas "Yubico Authenticator", id: 1497506650
 vscode "aaron-bond.better-comments"
 vscode "albert.tabout"
 vscode "beardedbear.beardedicons"
-vscode "bierner.emojisense"
 vscode "catppuccin.catppuccin-vsc"
 vscode "codezombiech.gitignore"
 vscode "davidanson.vscode-markdownlint"
 vscode "docker.docker"
 vscode "donjayamanne.githistory"
 vscode "eamodio.gitlens"
-vscode "editorconfig.editorconfig"
 vscode "enkia.tokyo-night"
+vscode "github.codespaces"
 vscode "github.copilot"
 vscode "github.copilot-chat"
 vscode "github.github-vscode-theme"
@@ -283,27 +288,39 @@ vscode "helixquar.asciidecorator"
 vscode "johnpapa.vscode-peacock"
 vscode "lzm0x219.vscode-markdown-github"
 vscode "mhutchie.git-graph"
+vscode "ms-azuretools.vscode-azure-github-copilot"
+vscode "ms-azuretools.vscode-azure-mcp-server"
 vscode "ms-azuretools.vscode-azureresourcegroups"
-vscode "ms-azuretools.vscode-docker"
+vscode "ms-azuretools.vscode-azureterraform"
+vscode "ms-azuretools.vscode-containers"
+vscode "ms-dotnettools.dotnet-interactive-vscode"
 vscode "ms-python.debugpy"
 vscode "ms-python.python"
 vscode "ms-python.vscode-pylance"
+vscode "ms-python.vscode-python-envs"
+vscode "ms-toolsai.jupyter"
+vscode "ms-toolsai.jupyter-keymap"
+vscode "ms-toolsai.jupyter-renderers"
+vscode "ms-toolsai.vscode-jupyter-cell-tags"
+vscode "ms-toolsai.vscode-jupyter-slideshow"
 vscode "ms-vscode-remote.remote-containers"
 vscode "ms-vscode-remote.remote-ssh"
 vscode "ms-vscode-remote.remote-ssh-edit"
+vscode "ms-vscode-remote.remote-wsl"
 vscode "ms-vscode.azure-repos"
 vscode "ms-vscode.powershell"
 vscode "ms-vscode.remote-explorer"
 vscode "ms-vscode.remote-repositories"
+vscode "ms-vscode.remote-server"
 vscode "naumovs.color-highlight"
-vscode "redhat.ansible"
+vscode "oderwat.indent-rainbow"
+vscode "onlyutkarsh.vscode-az-pricing"
+vscode "pkief.material-icon-theme"
 vscode "redhat.vscode-yaml"
 vscode "shyykoserhiy.git-autoconfig"
-vscode "streetsidesoftware.code-spell-checker"
-vscode "streetsidesoftware.code-spell-checker-dutch"
 vscode "takumii.markdowntable"
 vscode "timdenholm.netscaler"
 vscode "ultram4rine.vscode-choosealicense"
 vscode "usernamehw.errorlens"
-vscode "vscodevim.vim"
+vscode "vscode-icons-team.vscode-icons"
 vscode "yahyabatulu.vscode-markdown-alert"
