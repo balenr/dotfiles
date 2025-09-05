@@ -35,7 +35,7 @@ config.window_padding = {
 	top = 64,
 	bottom = 10,
 }
-config.scrollback_lines = 15000
+config.scrollback_lines = 150000
 config.default_workspace = "main"
 
 -- Keys
@@ -56,7 +56,7 @@ config.mouse_bindings = {
 }
 
 -- Tab bar
-config.enable_tab_bar = false
+config.enable_tab_bar = true
 config.use_fancy_tab_bar = false
 config.tab_bar_at_bottom = false
 config.status_update_interval = 1000
