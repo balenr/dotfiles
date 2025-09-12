@@ -1,10 +1,5 @@
 local wezterm = require("wezterm")
-local config = {}
-
--- Use config builder object if possible
-if wezterm.config_builder then
-	config = wezterm.config_builder()
-end
+local config = wezterm.config_builder()
 
 -- Launch Menu
 local launch_menu = {}
@@ -17,17 +12,17 @@ table.insert(launch_menu, {
 config.launch_menu = launch_menu
 
 -- Settings
-config.color_scheme = "Catppuccin Mocha"
-config.font = wezterm.font("Hack Nerd Font Mono")
+config.color_scheme = "tokyonight_night"
+config.font = wezterm.font("RobotoMono Nerd Font Mono")
 config.font_size = 18.0
--- macos_window_background_blur = 30,
+config.macos_window_background_blur = 20
 -- window_background_image = '/Users/omerhamerman/Downloads/3840x1080-Wallpaper-041.jpg',
 -- window_background_image_hsb = {
 --  brightness = 0.01,
 --  hue = 1.0,
 --  saturation = 0.5,
 -- },
-config.window_background_opacity = 0.9
+config.window_background_opacity = 0.84
 config.window_decorations = "INTEGRATED_BUTTONS|RESIZE"
 config.window_padding = {
 	left = "1cell",
@@ -56,9 +51,11 @@ config.mouse_bindings = {
 }
 
 -- Tab bar
-config.enable_tab_bar = true
+config.enable_tab_bar = false
 config.use_fancy_tab_bar = false
 config.tab_bar_at_bottom = false
 config.status_update_interval = 1000
+
+quit_when_all_windows_are_closed = false
 
 return config
