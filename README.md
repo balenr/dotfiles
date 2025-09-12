@@ -17,6 +17,9 @@ Currently the repository contains configuration files for:
 - [Homebrew](https://brew.sh) - Package manager for macOS and Linux
 - [Bat](https://github.com/sharkdp/bat) - A cat clone with syntax highlighing
 - [GNU Stow](https://www.gnu.org/software/stow/) - To manage my dotfiles
+- [Neovim](https://neovim.io) - Vim-based text editor
+- [Ghostty](https://ghostty.org) - Terminal emulator
+- [WezTerm](https://wezterm.org) - Terminal emulator
 
 ## Requirements
 
