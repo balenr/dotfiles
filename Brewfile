@@ -3,10 +3,8 @@ tap "arl/arl"
 tap "dart-lang/dart"
 tap "epk/epk"
 tap "hashicorp/tap"
-tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/core"
-tap "homebrew/services"
 tap "koekeishiya/formulae"
 tap "microsoft/git"
 tap "sass/sass"
@@ -22,6 +20,8 @@ brew "libyaml"
 brew "readline"
 # General-purpose data compression with high compression ratio
 brew "xz"
+# Display directories as trees (with optional color/HTML output)
+brew "tree"
 # Automate deployment, configuration, and upgrading
 brew "ansible"
 # Checks ansible playbooks for practices and behaviour
@@ -34,6 +34,8 @@ brew "automake"
 brew "awscli"
 # Microsoft Azure CLI 2.0
 brew "azure-cli"
+# Bourne-Again SHell, a UNIX command interpreter
+brew "bash"
 # C library of Git core methods that is re-entrant and linkable
 brew "libgit2"
 # Clone of cat(1) with syntax highlighting and Git integration
@@ -148,6 +150,8 @@ brew "sslscan"
 brew "starship"
 # Organize software neatly under a single directory tree (e.g. /usr/local)
 brew "stow"
+# CLI for out-of-band management of Kubernetes nodes created by Talos
+brew "talosctl"
 # User interface to the TELNET protocol
 brew "telnet"
 # Tool to generate documentation from Terraform modules
@@ -156,14 +160,14 @@ brew "terraform-docs"
 brew "terragrunt"
 # Linter for Terraform files
 brew "tflint"
+# Official tldr client written in Rust
+brew "tlrc"
 # Terminal multiplexer
 brew "tmux"
 # Program that allows you to count code, quickly
 brew "tokei"
 # Command-line interface to the freedesktop.org trashcan
 brew "trash-cli", link: true
-# Display directories as trees (with optional color/HTML output)
-brew "tree"
 # Extremely fast Python package installer and resolver, written in Rust
 brew "uv"
 # Internet file retriever
@@ -184,6 +188,8 @@ brew "hashicorp/tap/terraform"
 brew "hashicorp/tap/vault"
 # Stylesheet Preprocessor
 brew "sass/sass/sass"
+# GPU-accelerated terminal emulator
+cask "alacritty"
 # Enable Windows-like alt-tab
 cask "alt-tab"
 # Compact TeX distribution as alternative to the full TeX Live / MacTeX
@@ -194,6 +200,8 @@ cask "brave-browser"
 cask "firefox"
 cask "font-meslo-lg-nerd-font"
 cask "font-petit-formal-script"
+cask "font-roboto-mono-nerd-font"
+cask "font-sauce-code-pro-nerd-font"
 # Terminal emulator that uses platform-native UI and GPU acceleration
 cask "ghostty"
 # Cross-platform Git credential storage for multiple hosting providers
