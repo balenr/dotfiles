@@ -37,7 +37,7 @@ config.default_workspace = "main"
 -- config.leader = {key = "a", mods = "CTRL", timeout_milliseconds = 1000}
 config.keys = {
 	-- { key = "f", mods = "CTRL", action = wezterm.action.ToggleFullScreen },
-	{ key = "l", mods = "CTRL", action = wezterm.action.ShowLauncher },
+	{ key = "p", mods = "CTRL", action = wezterm.action.ShowLauncher },
 }
 
 -- Mouse
