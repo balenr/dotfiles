@@ -41,6 +41,7 @@ end, opts)
 
 -- fzf-lua
 keymap.set("n", "<leader>ff", "<cmd> FzfLua files <cr>", opts)
+keymap.set("n", "<leader>fb", "<cmd> FzfLua buffers <cr>", opts)
 keymap.set("n", "<leader>gc", "<cmd> FzfLua git_branches <cr>", opts)
 keymap.set("n", "<leader>fw", "<cmd> FzfLua live_grep <cr>", opts)
 keymap.set("n", "<leader>fh", "<cmd> FzfLua help_tags <cr>", opts)
