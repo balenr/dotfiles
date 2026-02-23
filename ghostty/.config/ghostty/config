@@ -1,15 +1,34 @@
-# Fonts
-font-family = "Hack Nerd Font Mono"
-font-size = 16.0
-
 # Theme
-#theme = catppuccin-mocha
 theme = tokyonight
-background-opacity = 0.84
-background-blur-radius = 20
+
+# Font
+font-family = "Hack Nerd Font Mono"
+font-family = "SauceCodePro Nerd Font Mono"
+font-family = "IosevkaTerm Nerd Font Mono"
+font-family = "Lilex Nerd Font Mono"
+font-family = "Symbols Nerd Font Mono"
+font-size = 17
+adjust-cell-height = 10%
 
 # Window
+background-opacity = 0.84
+background-blur-radius = 10
 window-decoration = true
+# window-padding-x = 16
+# window-padding-y = 16
+# window-padding-balance = true
+window-padding-color = background
+window-save-state = always
+window-inherit-working-directory = true
+unfocused-split-opacity = 0.75
+quit-after-last-window-closed = true
+
+# Tabs
+window-show-tab-bar = auto
+# gtk-single-instance = desktop
+# gtk-tabs-location = bottom
+# gtk-wide-tabs = true
+# gtk-custom-css = /home/rene/.config/ghostty/style.css
 
 # Mouse
 mouse-hide-while-typing = true
@@ -18,6 +37,10 @@ mouse-hide-while-typing = true
 copy-on-select = clipboard
 macos-option-as-alt = left
 
-# Key mappings
+# Key binds
 keybind = ctrl+`=toggle_quick_terminal
+
+# Key binds - splits
+keybind = alt+enter=new_split:right
+keybind = alt+shift+enter=new_split:down
 
