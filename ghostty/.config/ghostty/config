@@ -1,5 +1,5 @@
 # Theme
-theme = tokyonight
+theme = "tokyo_night"
 
 # Font
 font-family = "Hack Nerd Font Mono"
@@ -7,7 +7,7 @@ font-family = "SauceCodePro Nerd Font Mono"
 font-family = "IosevkaTerm Nerd Font Mono"
 font-family = "Lilex Nerd Font Mono"
 font-family = "Symbols Nerd Font Mono"
-font-size = 17
+font-size = 18
 adjust-cell-height = 10%
 
 # Window
@@ -16,12 +16,12 @@ background-blur-radius = 10
 window-decoration = true
 # window-padding-x = 16
 # window-padding-y = 16
-# window-padding-balance = true
+window-padding-balance = true
 window-padding-color = background
 window-save-state = always
 window-inherit-working-directory = true
 unfocused-split-opacity = 0.75
-quit-after-last-window-closed = true
+quit-after-last-window-closed = false
 
 # Tabs
 window-show-tab-bar = auto
