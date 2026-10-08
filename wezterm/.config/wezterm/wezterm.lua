@@ -13,9 +13,9 @@ config.launch_menu = launch_menu
 
 -- Settings
 config.color_scheme = "tokyonight_night"
-config.font = wezterm.font("RobotoMono Nerd Font Mono")
-config.font_size = 16.0
-config.macos_window_background_blur = 20
+config.font = wezterm.font("Hack Nerd Font Mono")
+config.font_size = 18.0
+config.macos_window_background_blur = 10
 -- window_background_image = '/Users/omerhamerman/Downloads/3840x1080-Wallpaper-041.jpg',
 -- window_background_image_hsb = {
 --  brightness = 0.01,
