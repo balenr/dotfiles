@@ -1,1 +1,1 @@
-fortune -s linuxcookie computers
+fortune -s linuxcookie computers | lolcat

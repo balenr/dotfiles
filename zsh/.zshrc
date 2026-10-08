@@ -132,3 +132,6 @@ eval "$(zoxide init --cmd cd zsh)"
 ## Starship prompt
 export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
 eval "$(starship init zsh)"
+
+# Added by Antigravity
+export PATH="/Users/rene/.antigravity/antigravity/bin:$PATH"
