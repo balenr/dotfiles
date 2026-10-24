@@ -2,17 +2,17 @@
 theme = "tokyo_night"
 
 # Font
-font-family = "Hack Nerd Font Mono"
-font-family = "SauceCodePro Nerd Font Mono"
-font-family = "IosevkaTerm Nerd Font Mono"
-font-family = "Lilex Nerd Font Mono"
-font-family = "Symbols Nerd Font Mono"
+font-family = "RobotoMono Nerd Font Mono"
+# font-family = "SauceCodePro Nerd Font Mono"
+# font-family = "IosevkaTerm Nerd Font Mono"
+# font-family = "Lilex Nerd Font Mono"
+# font-family = "Symbols Nerd Font Mono"
 font-size = 18
 adjust-cell-height = 10%
 
 # Window
 background-opacity = 0.84
-background-blur-radius = 10
+background-blur-radius = 8
 window-decoration = true
 # window-padding-x = 16
 # window-padding-y = 16
